@@ -1,19 +1,19 @@
 [
   {
-    "id": 0,
-    "image": 0,
-    "text": "aaaaabbbbb",
+    "EventID": 0,
+    "ImageIndex": 0,
+    "ShowText": "aaaaabbbbb",
 
-    "result_text_a": "ddddddddddeeeeeeee",
-    "result_text_b": "ddddddddddeeeeeeee",
+    "ResultTextA": "ddddddddddeeeeeeee",
+    "ResultTextB": "ddddddddddeeeeeeee",
 
-    "changes_a": {
-      "people": 10,
+    "Changes_A": {
+      "people": 12,
       "policy": -10,
       "economic": 20,
       "military": 0
     },
-    "changes_b": {
+    "Changes_B": {
       "people": -10,
       "policy": 0,
       "economic": 10,
@@ -22,20 +22,20 @@
 
   },
   {
-    "id": 1,
-    "image": 0,
-    "text": "aaaaabbbbb",
+    "ID": 0,
+    "Image": 0,
+    "Text": "aaaaabbbbb",
 
-    "result_text_a": "ddddddddddeeeeeeee",
-    "result_text_b": "ddddddddddeeeeeeee",
+    "Result_Text_A": "ddddddddddeeeeeeee",
+    "Result_Text_B": "ddddddddddeeeeeeee",
 
-    "changes_a": {
-      "people": 10,
+    "Changes_A": {
+      "people": 13,
       "policy": -10,
       "economic": 20,
       "military": 0
     },
-    "changes_b": {
+    "Changes_B": {
       "people": -10,
       "policy": 0,
       "economic": 10,
