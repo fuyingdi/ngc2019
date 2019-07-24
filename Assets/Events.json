@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "image": 0,
+    "text": "aaaaabbbbb",
+
+    "result_text_a": "ddddddddddeeeeeeee",
+    "result_text_b": "ddddddddddeeeeeeee",
+
+    "changes_a": {
+      "people": 10,
+      "policy": -10,
+      "economic": 20,
+      "military": 0
+    },
+    "changes_b": {
+      "people": -10,
+      "policy": 0,
+      "economic": 10,
+      "military": 10
+    }
+
+  },
+  {
+    "id": 1,
+    "image": 0,
+    "text": "aaaaabbbbb",
+
+    "result_text_a": "ddddddddddeeeeeeee",
+    "result_text_b": "ddddddddddeeeeeeee",
+
+    "changes_a": {
+      "people": 10,
+      "policy": -10,
+      "economic": 20,
+      "military": 0
+    },
+    "changes_b": {
+      "people": -10,
+      "policy": 0,
+      "economic": 10,
+      "military": 10
+    }
+
+  }
+]
