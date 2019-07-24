@@ -15,12 +15,12 @@ public class EventCreator : MonoBehaviour
         GameEvents = JsonMapper.ToObject<List<GameEvent>>(JsonString);
 
         #region
-        //foreach(System.Reflection.PropertyInfo p in GameEvents[0].GetType().GetProperties())
-        //{
-        //    print(p.Name + ":" + p.GetValue(GameEvents[0], null));
-        //}
-        //print(GameEvents[0].EventID);
-        //print(GameEvents[0].Changes_A.people);
+        foreach (System.Reflection.PropertyInfo p in GameEvents[0].GetType().GetProperties())
+        {
+            print(p.Name + ":" + p.GetValue(GameEvents[0], null));
+        }
+        print(GameEvents[0].EventID);
+        print(GameEvents[0].Changes_A.people);
         #endregion
     }
 

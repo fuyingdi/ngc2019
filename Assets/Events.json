@@ -1,11 +1,15 @@
-[
+﻿[
   {
     "EventID": 0,
     "ImageIndex": 0,
-    "ShowText": "aaaaabbbbb",
+    "ShowText": "你面前有一坨屎，要吃吗？",
 
-    "ResultTextA": "ddddddddddeeeeeeee",
-    "ResultTextB": "ddddddddddeeeeeeee",
+    "ResultTextA": "你死了",
+    "ResultTextB": "你活了",
+
+    "OptionTextA": "吃",
+    "OptionTextB": "不吃",
+
 
     "Changes_A": {
       "people": 12,
@@ -28,6 +32,10 @@
 
     "Result_Text_A": "ddddddddddeeeeeeee",
     "Result_Text_B": "ddddddddddeeeeeeee",
+
+
+    "OptionTextA": "吃",
+    "OptionTextB": "不吃",
 
     "Changes_A": {
       "people": 13,

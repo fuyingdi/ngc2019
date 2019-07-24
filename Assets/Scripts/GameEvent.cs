@@ -13,6 +13,9 @@ public class GameEvent
     public string ResultTextA { get; set; }
     public string ResultTextB { get; set; }
 
+    public string OptionTextA { get; set; }
+    public string OptionTextB { get; set; }
+
     public int EventID { get; set; }
     public int ImageIndex { get; set; }
 
