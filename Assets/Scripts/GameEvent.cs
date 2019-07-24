@@ -33,7 +33,11 @@ public class GameEvent
         public int economic;
     }
 
+}
 
-
-
+public class SerialGameEvent:GameEvent
+{
+    public int NextID_A;
+    public int NextID_B;
+    public bool IsBegin;
 }

@@ -1,0 +1,75 @@
+﻿[
+  {
+    "EventID": 0,
+    "ImageIndex": 0,
+    "ShowText": "陛下，您是否愿意接受南蛮国的和亲？  ",
+    "ResultTextA": "你死了",
+    "ResultTextB": "你活了",
+    "OptionTextA": "去事件1",
+    "OptionTextB": "去事件2",
+    "NextID_A": 1,
+    "NextID_B": 2,
+    "IsBegin": true,
+    "Changes_A": {
+      "people": 12,
+      "policy": -10,
+      "economic": 20,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 10,
+      "military": 10
+    }
+  },
+  {
+    "EventID": 1,
+    "ImageIndex": 0,
+    "ShowText": "事件1",
+    "ResultTextA": "你死了",
+    "ResultTextB": "你活了",
+    "OptionTextA": "0",
+    "OptionTextB": "0",
+    "NextID_A": 0,
+    "NextID_B": 0,
+    "IsBegin": false,
+    "Changes_A": {
+      "people": 12,
+      "policy": -10,
+      "economic": 20,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 10,
+      "military": 10
+    }
+  },
+  {
+    "EventID": 2,
+    "ImageIndex": 0,
+    "ShowText": "事件2",
+    "ResultTextA": "你死了",
+    "ResultTextB": "你活了",
+    "OptionTextA": "0",
+    "OptionTextB": "0",
+    "NextID_A": 0,
+    "NextID_B": 0,
+    "IsBegin": false,
+    "Changes_A": {
+      "people": 12,
+      "policy": -10,
+      "economic": 20,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 10,
+      "military": 10
+    }
+  }
+ 
+]
