@@ -22,7 +22,7 @@ public class EventCreator : MonoBehaviour
 
     static bool inSeries;
 
-    void Start()
+    void Awake()
     {
         //生成普通事件池
         JsonString = File.ReadAllText(Application.dataPath + "\\Events.json");

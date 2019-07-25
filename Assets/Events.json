@@ -100,8 +100,8 @@
     "Changes_B": {
       "people": -10,
       "policy": 0,
-      "economic": 10,
-      "military": 10
+      "economic": -10,
+      "military": -10
     }
   },
   {
