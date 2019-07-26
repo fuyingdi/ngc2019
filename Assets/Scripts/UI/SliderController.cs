@@ -13,17 +13,11 @@ public class SliderController : MonoBehaviour
     private float time;//关于速度曲线的时间点
     private bool targetValueReached = true;//是否到达了规定数值
 
-    /// <summary>
-    /// 每帧更新的部分
-    /// </summary>
     private void Update()
     {
         UpdateSlider();
     }
 
-    /// <summary>
-    /// 更新数值条
-    /// </summary>
     private void UpdateSlider()
     {
         if (!targetValueReached)//当没有到达目标数值

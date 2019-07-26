@@ -25,7 +25,7 @@ public class EventCreator : MonoBehaviour
     void Awake()
     {
         //生成普通事件池
-        JsonString = File.ReadAllText(Application.dataPath + "\\Events.json");
+        JsonString = File.ReadAllText(Application.dataPath + "\\Resources\\Events.json");
         JsonData EventData = JsonMapper.ToObject(JsonString);
         GameEvents = JsonMapper.ToObject<List<GameEvent>>(JsonString);
 
@@ -39,6 +39,14 @@ public class EventCreator : MonoBehaviour
 
         isEventUsed = new bool[EventCount];
         isSerialEventUsed = new bool[SerialEventCount];
+
+        foreach(GameEvent e in GameEvents)
+        {
+            if(e.Changes_A==null||e.Changes_B ==null)
+            {
+                Debug.Log(e.EventID);
+            }
+        }
 
 
         #region

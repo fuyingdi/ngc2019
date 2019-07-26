@@ -10,11 +10,13 @@ public class ScrollController : MonoBehaviour
     public float OriginY = 40f;
 
     public float speed = 1f;
+    public AnimationCurve CurveSpeed;
 
     void Start()
     {
-        TargetY = 310f;
-        OriginY = 40f;
+        Debug.Log("fff");
+        TargetY = 380f;
+        OriginY = 80f;
         //StartCoroutine("ExpandScroll");
         //StartCoroutine("RollScroll");
     }
@@ -26,40 +28,49 @@ public class ScrollController : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) StartCoroutine("ExpandScroll");
     }
 
-    public void foo()
+    public void RollScroll()
     {
         Debug.Log("!");
-        StartCoroutine("ExpandScroll");
+        StartCoroutine("rollScroll");
+    }
+    public void ExpandScroll()
+    {
+        expandScroll();
+        StartCoroutine("expandScroll");
     }
 
 
     // 展开
-    public IEnumerator RollScroll()
+    IEnumerator rollScroll()
     {
+        float x = 0;
         Button btn1 = Scrolls[0];
         Button btn2 = Scrolls[1];
         RectTransform trans1 = btn1.GetComponent<RectTransform>();
         RectTransform trans2 = btn2.GetComponent<RectTransform>();
         while (trans1.localPosition.y < TargetY || trans2.localPosition.y < TargetY)
         {
-            trans1.Translate(Vector3.up * speed);
-            trans2.Translate(Vector3.up * speed);
+            x += Time.deltaTime;
+            trans1.Translate(Vector3.up * speed * CurveSpeed.Evaluate(x));
+            trans2.Translate(Vector3.up * speed * CurveSpeed.Evaluate(x));
             yield return null;
         }
+        GameObject.Find("EventController").GetComponent<EventController>().isWaitForNext =true;
     }
 
     // 卷起
-    public IEnumerator ExpandScroll()
+    IEnumerator expandScroll()
     {
-        Debug.Log("2");
+        float x = 0;        
         Button btn1 = Scrolls[0];
         Button btn2 = Scrolls[1];
         RectTransform trans1 = btn1.GetComponent<RectTransform>();
         RectTransform trans2 = btn2.GetComponent<RectTransform>();
         while (trans1.localPosition.y > OriginY || trans2.localPosition.y > OriginY)
         {
-            trans1.Translate(Vector3.down * speed);
-            trans2.Translate(Vector3.down * speed);
+            x += Time.deltaTime;
+            trans1.Translate(Vector3.down * speed * 0.1f);
+            trans2.Translate(Vector3.down * speed * 0.1f);
             yield return null;
         }
     }

@@ -23,7 +23,7 @@ public class CloudAnimation : MonoBehaviour
     {
         Vector2 horizontalRange = new Vector2(OriginalPos.x - HorizontalOffsetRange.x, OriginalPos.x + HorizontalOffsetRange.y);
         Vector2 verticalRange = new Vector2(OriginalPos.y - VerticalOffsetRange.x, OriginalPos.y + VerticalOffsetRange.y);
-        Debug.Log(VerticalOffsetRange);
+
         
 
         if (HorizontalOffsetRange.magnitude > 0)

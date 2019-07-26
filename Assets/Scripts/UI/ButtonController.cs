@@ -15,7 +15,8 @@ public class ButtonController : MonoBehaviour
     }
     public void OnClick(string button)
     {
-        GetComponent<EventController>().ShowResult(button);//更新结果文本
+        Debug.Log("love");
+        GetComponent<EventController>().ShowResult(button);
     }
 
     public void OnEnter()

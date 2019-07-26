@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private void Start()
+    {
+
+        SetAllValue(50, 50, 50, 50);
+
+    }
     public static int People
     {
         get
@@ -67,5 +73,12 @@ public class Player : MonoBehaviour
         Policy += policy;
         Economic += economic;
         Military += military;
+    }
+    void SetAllValue(int people, int policy, int military, int economic)
+    {
+        People = people;
+        Policy = policy;
+        Economic = economic;
+        Military = military;
     }
 }

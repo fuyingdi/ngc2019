@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using TMPro;
 
 public class EventController : MonoBehaviour/*事件控制器*/
@@ -8,70 +9,95 @@ public class EventController : MonoBehaviour/*事件控制器*/
     public TextMeshProUGUI ShowBox;
     public TextMeshProUGUI OptionAText;
     public TextMeshProUGUI OptionBText;
+    public GameObject DoorLeft;
+    public GameObject DoorRight;
+    public float DoorSpeed = 10f;
 
     public static GameEvent currentEvent;//当前的事件
     private int currentEventID = 0;//当前事件ID号
 
-    public static bool eventUpdated = true;//是否已经更新了事件
 
 
     public GameObject ChracaterObj;
     public Sprite[] CharacterSprites;
 
+    public bool isWaitForNext;
+
 
     private void Awake()
     {
-        Player.Economic = Player.People = Player.Policy = Player.Military = 100;//初始每项的值为100
+        Player.Economic = Player.People = Player.Policy = Player.Military = 50;
     }
 
     private void Start()
     {
-        ShowEvent();
+        ShowNewEvent();
     }
+    
 
-    public void ShowEvent()
+    public void ShowNewEvent()
     {
+
         currentEvent = EventCreator.GetGameEvent();//获取事件
         ShowBox.text = currentEvent.ShowText;
         OptionAText.text = currentEvent.OptionTextA;
         OptionBText.text = currentEvent.OptionTextB;
         ChracaterObj.GetComponent<SpriteRenderer>().sprite = CharacterSprites[0];
-        Camera.main.GetComponent<ScrollController>().foo();
+        Camera.main.GetComponent<ScrollController>().ExpandScroll();
 
     }
     public void ShowResult(string buttonName)
     {
+        Camera.main.GetComponent<ScrollController>().RollScroll();
         if (buttonName == "A")
             ShowBox.text = currentEvent.ResultTextA;
         else
             ShowBox.text = currentEvent.ResultTextB;
-        Camera.main.GetComponent<ScrollController>().StartCoroutine("RollScroll");
+        //isWaitForNext = true;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))//当鼠标按下后抬起
+        if(Input.GetKeyDown(KeyCode.D))
         {
-            if (EventandResultController.resultShowed)//如果结果已展示
-            {
-                EventandResultController.resultShowed = eventUpdated = false;//设定事件需要被更新，新的结果未显示
-                CharacterImageController.imageUpdated = false;//设定人物图片需要更新
-            }
-            else if (!eventUpdated)//如果事件需要被更新
-            {
-                ;
-            }
+            MoveDoor();
         }
-        //if (!eventUpdated && doorAnimator[0].GetFloat("Time") > 1)//如果事件没有更新并且门的动画已播放完毕
-        //{
-        //    doorAnimator[0].SetFloat("Time", 0);//重置动画
-        //    doorAnimator[1].SetFloat("Time", 0);
-        //    doorAnimator[0].enabled = doorAnimator[1].enabled = false;//关闭门的动画
-        //    currentEvent = EventCreator.GetGameEvent();//更新事件
-        //    GetComponent<EventandResultController>().UpdateEventText();//更新事件文本
-        //    GetComponent<ButtonController>().OnEnter();//更新按钮文本
-        //    GetComponent<ButtonController>().buttonAText.GetComponentInParent<Button>().enabled = GetComponent<ButtonController>().buttonBText.GetComponentInParent<Button>().enabled = true;//设定按钮为开启状态
-        //    eventUpdated = true;//设定事件已更新
-        //}
+        if (isWaitForNext && Input.GetMouseButtonDown(0))//当鼠标按下后抬起
+        {
+            isWaitForNext = false;
+            MoveDoor();
+            Invoke("ShowNewEvent", 0.8f);
+
+        }
+    }
+
+    void MoveDoor()
+    {
+        StartCoroutine("DoorAnimation");
+    }
+
+    IEnumerator DoorAnimation()
+    {
+        float leftOrigin = -8.1f;
+        float leftTarget = -5.5f;
+        float rightOrigin = -0.2f;
+        float rightTarget = -2.8f;
+        while(DoorLeft.transform.localPosition.x<leftTarget||DoorRight.transform.localPosition.x>rightTarget)
+        {
+            DoorLeft.transform.Translate(Vector2.right * DoorSpeed*Time.deltaTime);
+            DoorRight.transform.Translate(Vector2.left * DoorSpeed*Time.deltaTime);
+            yield return null;
+        }
+        while(DoorLeft.transform.localPosition.x>leftOrigin||DoorRight.transform.localPosition.x<rightOrigin)
+        {
+            DoorLeft.transform.Translate(Vector2.left * DoorSpeed * Time.deltaTime);
+            DoorRight.transform.Translate(Vector2.right * DoorSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+
+
+
+
     }
 }
