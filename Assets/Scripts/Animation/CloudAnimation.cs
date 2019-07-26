@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class CloudAnimation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float MoveSpeed = 0.01f;
+    public Vector2 HorizontalOffsetRange = new Vector2(0.1f, 0.1f);
+    public Vector2 VerticalOffsetRange = new Vector2(0.1f, 0.1f);
+    public Vector2 OriginalPos;
+    float horizontalSpeed = 1f;
+    float verticalSpeed = 1f;
     void Start()
     {
-        
+
+    }
+    private void Awake()
+    {
+        OriginalPos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector2 horizontalRange = new Vector2(OriginalPos.x - HorizontalOffsetRange.x, OriginalPos.x + HorizontalOffsetRange.y);
+        Vector2 verticalRange = new Vector2(OriginalPos.y - VerticalOffsetRange.x, OriginalPos.y + VerticalOffsetRange.y);
+
+        if (HorizontalOffsetRange.magnitude > 0)
+        {
+            transform.Translate(new Vector2(horizontalSpeed, 0) * Time.deltaTime * MoveSpeed);
+            Debug.Log(horizontalRange);
+            if (transform.position.x > horizontalRange.y || transform.position.x < horizontalRange.x)
+                horizontalSpeed = -horizontalSpeed;
+        }
+        if (VerticalOffsetRange.magnitude > 0)
+        {
+            Debug.Log(verticalRange);
+            transform.Translate(new Vector2(0, verticalSpeed) * Time.deltaTime * MoveSpeed);
+            if (transform.position.y > verticalRange.y || transform.position.y < verticalRange.x)
+                verticalSpeed = -verticalSpeed;
+        }
+
     }
 }
