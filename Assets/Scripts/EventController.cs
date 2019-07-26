@@ -33,7 +33,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
     /// </summary>
     private void Start()
     {
-        currentEvent = EventCreator.GetGameEvent();//从第一个事件开始
+        currentEvent = EventCreator.GetGameEvent();//获取事件
         GetComponent<EventandResultController>().UpdateEventText();//初始化事件文本
     }
 
@@ -46,12 +46,11 @@ public class EventController : MonoBehaviour/*事件控制器*/
         {
             if (EventandResultController.resultShowed)//如果结果已展示
             {
-                GetComponent<ButtonController>().buttonAText.text = GetComponent<ButtonController>().buttonBText.text = null;//清空按钮选项
                 EventandResultController.resultShowed = eventUpdated = false;//设定事件需要被更新，新的结果未显示
             }
             else if (!eventUpdated)//如果事件需要被更新
             {
-                currentEvent = EventCreator.GetGameEvent(); //更新事件
+                currentEvent = EventCreator.GetGameEvent();//更新事件
                 GetComponent<EventandResultController>().UpdateEventText();//更新事件文本
                 GetComponent<ButtonController>().OnEnter();//更新按钮文本
                 GetComponent<ButtonController>().buttonAText.GetComponentInParent<Button>().enabled = GetComponent<ButtonController>().buttonBText.GetComponentInParent<Button>().enabled = true;//设定按钮为开启状态

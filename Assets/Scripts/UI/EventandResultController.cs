@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 /// <summary>
 /// 事件和结果显示控制器
 /// </summary>
 public class EventandResultController : MonoBehaviour
 {
-    public Text currentEventandResult;//当前的事件及结果
+    public TextMeshProUGUI currentEventandResult;//当前的事件及结果
     public static bool resultShowed = false;//结果是否已经展示
 
     /// <summary>

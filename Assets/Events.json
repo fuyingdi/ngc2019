@@ -1,20 +1,20 @@
-﻿[
+[
   {
     "EventID": 0,
     "ImageIndex": 0,
-    "ShowText": "陛下，您是否愿意接受南蛮国的和亲？",
+    "ShowText": "陛下，您是否愿意接受南蛮国的和亲？  ",
     "ResultTextA": "你死了",
     "ResultTextB": "你活了",
     "OptionTextA": "我接受",
     "OptionTextB": "她不配",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -30,12 +30,12 @@
     "OptionTextB": "功高震主",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -51,12 +51,12 @@
     "OptionTextB": "朕与皇后情深似海，无需多言",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -72,12 +72,12 @@
     "OptionTextB": "他们还有用",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -93,15 +93,15 @@
     "OptionTextB": "将百姓调离水患区域",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
-      "economic": -10,
-      "military": -10
+      "economic": 10,
+      "military": 10
     }
   },
   {
@@ -114,12 +114,12 @@
     "OptionTextB": "其才华而不实",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -135,12 +135,12 @@
     "OptionTextB": "其才华而不实",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -156,12 +156,12 @@
     "OptionTextB": "以和为贵",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -177,12 +177,12 @@
     "OptionTextB": "国家守卫空虚，不能发兵",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -198,12 +198,12 @@
     "OptionTextB": "穷寇莫追",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10
@@ -219,12 +219,12 @@
     "OptionTextB": "不接受求和",
     "Changes_A": {
       "people": 12,
-      "policy": -10,
+      "policy": -100,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -100,
       "policy": 0,
       "economic": 10,
       "military": 10

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -62,18 +61,10 @@ public class Player : MonoBehaviour
     static int _military;
     static int _economic;
 
-    void Start()
-    {
-        People = 100;
-        Policy = 100;
-        Military = 100;
-        Economic = 100;
-    }
-
     public static void ChangeAllValue(int people, int policy, int military, int economic)
     {
         People += people;
-        Policy += Policy;
+        Policy += policy;
         Economic += economic;
         Military += military;
     }
