@@ -23,17 +23,17 @@ public class CloudAnimation : MonoBehaviour
     {
         Vector2 horizontalRange = new Vector2(OriginalPos.x - HorizontalOffsetRange.x, OriginalPos.x + HorizontalOffsetRange.y);
         Vector2 verticalRange = new Vector2(OriginalPos.y - VerticalOffsetRange.x, OriginalPos.y + VerticalOffsetRange.y);
+        Debug.Log(VerticalOffsetRange);
+        
 
         if (HorizontalOffsetRange.magnitude > 0)
         {
             transform.Translate(new Vector2(horizontalSpeed, 0) * Time.deltaTime * MoveSpeed);
-            Debug.Log(horizontalRange);
             if (transform.position.x > horizontalRange.y || transform.position.x < horizontalRange.x)
                 horizontalSpeed = -horizontalSpeed;
         }
         if (VerticalOffsetRange.magnitude > 0)
         {
-            Debug.Log(verticalRange);
             transform.Translate(new Vector2(0, verticalSpeed) * Time.deltaTime * MoveSpeed);
             if (transform.position.y > verticalRange.y || transform.position.y < verticalRange.x)
                 verticalSpeed = -verticalSpeed;

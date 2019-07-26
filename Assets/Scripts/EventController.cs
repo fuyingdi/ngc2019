@@ -1,49 +1,53 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 public class EventController : MonoBehaviour/*事件控制器*/
 {
+
+    public TextMeshProUGUI ShowBox;
+    public TextMeshProUGUI OptionAText;
+    public TextMeshProUGUI OptionBText;
 
     public static GameEvent currentEvent;//当前的事件
     private int currentEventID = 0;//当前事件ID号
 
-
-    //[Header("关于人物图片的游戏对象")]
-    //public GameObject characterImages;
-
-    public int totalAudios;//声音总数
-    private int audiosIndex;//声音的索引值
-    private AudioClip[] audios;//声音片段数组
-    private AudioClip currentAudio;//当前显示的声音
-
     public static bool eventUpdated = true;//是否已经更新了事件
 
 
+    public GameObject ChracaterObj;
+    public Sprite[] CharacterSprites;
 
-    public Sprite[] Characters;
 
-
-    /// <summary>
-    /// 初始化
-    /// </summary>
     private void Awake()
     {
-        audios = new AudioClip[totalAudios];//确定声音片段数组长度
         Player.Economic = Player.People = Player.Policy = Player.Military = 100;//初始每项的值为100
     }
 
-    /// <summary>
-    /// 初始化
-    /// </summary>
     private void Start()
     {
-        currentEvent = EventCreator.GetGameEvent();//获取事件
-        GetComponent<EventandResultController>().UpdateEventText();//初始化事件文本
-        //characterImages.GetComponent<CharacterImageController>().UpdateImage();//初始化人物图片
+        ShowEvent();
     }
 
-    /// <summary>
-    /// 每帧更新的部分
-    /// </summary>
+    public void ShowEvent()
+    {
+        currentEvent = EventCreator.GetGameEvent();//获取事件
+        ShowBox.text = currentEvent.ShowText;
+        OptionAText.text = currentEvent.OptionTextA;
+        OptionBText.text = currentEvent.OptionTextB;
+        ChracaterObj.GetComponent<SpriteRenderer>().sprite = CharacterSprites[0];
+        Camera.main.GetComponent<ScrollController>().foo();
+
+    }
+    public void ShowResult(string buttonName)
+    {
+        if (buttonName == "A")
+            ShowBox.text = currentEvent.ResultTextA;
+        else
+            ShowBox.text = currentEvent.ResultTextB;
+        Camera.main.GetComponent<ScrollController>().StartCoroutine("RollScroll");
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))//当鼠标按下后抬起
