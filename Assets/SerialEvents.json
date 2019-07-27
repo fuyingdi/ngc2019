@@ -2,9 +2,9 @@
   {
     "EventID": 0,
     "ImageIndex": 0,
-    "ShowText": "陛下，您是否愿意接受南蛮国的和亲？  ",
-    "ResultTextA": "你死了",
-    "ResultTextB": "你活了",
+    "ShowText": "这是一个连续事件",
+    "ResultTextA": "去事件1",
+    "ResultTextB": "去事件2",
     "OptionTextA": "去事件1",
     "OptionTextB": "去事件2",
     "NextID_A": 1,
@@ -27,6 +27,30 @@
     "EventID": 1,
     "ImageIndex": 0,
     "ShowText": "事件1",
+    "ResultTextA": "去事件2",
+    "ResultTextB": "回事件0",
+    "OptionTextA": "去2",
+    "OptionTextB": "去3",
+    "NextID_A": 2,
+    "NextID_B": 3,
+    "IsBegin": false,
+    "Changes_A": {
+      "people": 12,
+      "policy": -10,
+      "economic": 20,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 10,
+      "military": 10
+    }
+  },
+  {
+    "EventID": 2,
+    "ImageIndex": 0,
+    "ShowText": "事件2",
     "ResultTextA": "你死了",
     "ResultTextB": "你活了",
     "OptionTextA": "0",
@@ -48,9 +72,9 @@
     }
   },
   {
-    "EventID": 2,
+    "EventID": 3,
     "ImageIndex": 0,
-    "ShowText": "事件2",
+    "ShowText": "事件3",
     "ResultTextA": "你死了",
     "ResultTextB": "你活了",
     "OptionTextA": "0",

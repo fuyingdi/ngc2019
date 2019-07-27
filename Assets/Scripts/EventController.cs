@@ -24,6 +24,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
     public bool isWaitForNext;
 
 
+
     private void Awake()
     {
         Player.Economic = Player.People = Player.Policy = Player.Military = 50;

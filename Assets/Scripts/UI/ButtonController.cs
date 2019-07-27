@@ -15,8 +15,15 @@ public class ButtonController : MonoBehaviour
     }
     public void OnClick(string button)
     {
-        Debug.Log("love");
         GetComponent<EventController>().ShowResult(button);
+        if (EventCreator.inSeries)
+        {
+            //设置下一事件
+            if (button == "A")
+                EventCreator.NextId = EventCreator.CurrentEvent.NextID_A;
+            if (button == "B")
+                EventCreator.NextId = EventCreator.CurrentEvent.NextID_B;
+        }
     }
 
     public void OnEnter()

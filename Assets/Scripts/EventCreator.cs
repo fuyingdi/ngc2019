@@ -16,11 +16,12 @@ public class EventCreator : MonoBehaviour
     public static int EventCount;
     public static int SerialEventCount;
 
-    public static float SerialEventRate=0.05f;
+    public static float SerialEventRate=1f; // 生成连续事件的概率
 
-    public static int NextId;
+    public static int NextId=-1;
+    public static bool inSeries;
+    public static SerialGameEvent CurrentEvent;
 
-    static bool inSeries;
 
     void Awake()
     {
@@ -61,7 +62,7 @@ public class EventCreator : MonoBehaviour
 
     void Update()
     {
-        
+
         
     }
 
@@ -74,6 +75,7 @@ public class EventCreator : MonoBehaviour
 
         if(inSeries)
         {
+            CurrentEvent = SerialGameEvents[NextId];
             return SerialGameEvents[NextId];
         }
         else
@@ -96,17 +98,22 @@ public class EventCreator : MonoBehaviour
             else
             {
                 //生成系列事件
+
                 int i = Random.Range(0, SerialEventCount);
                 int tryCount = 0;
-                while (isSerialEventUsed[i] && tryCount <= SerialEventCount && SerialGameEvents[i].IsBegin ==false)
+                while (isSerialEventUsed[i] && tryCount <= SerialEventCount || SerialGameEvents[i].IsBegin ==false)
                 {
                     i++;
                     i %= SerialEventCount;
                     tryCount++;
                 }
                 isSerialEventUsed[i] = true;
+
+                inSeries = true;
+                CurrentEvent = SerialGameEvents[i];
                 return SerialGameEvents[i];
             }
         }
+
     }
 }
