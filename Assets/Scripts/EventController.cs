@@ -43,7 +43,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
         ShowBox.text = currentEvent.ShowText;
         OptionAText.text = currentEvent.OptionTextA;
         OptionBText.text = currentEvent.OptionTextB;
-        ChracaterObj.GetComponent<SpriteRenderer>().sprite = CharacterSprites[0];
+        ChracaterObj.GetComponent<SpriteRenderer>().sprite = CharacterSprites[currentEvent.ImageIndex];
         Camera.main.GetComponent<ScrollController>().ExpandScroll();
 
     }
@@ -81,7 +81,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
     {
         float leftOrigin = -8.1f;
         float leftTarget = -5.5f;
-        float rightOrigin = -0.2f;
+        float rightOrigin = -0.53f;
         float rightTarget = -2.8f;
         while(DoorLeft.transform.localPosition.x<leftTarget||DoorRight.transform.localPosition.x>rightTarget)
         {

@@ -16,7 +16,7 @@ public class EventCreator : MonoBehaviour
     public static int EventCount;
     public static int SerialEventCount;
 
-    public static float SerialEventRate=1f; // 生成连续事件的概率
+    public static float SerialEventRate=0.01f; // 生成连续事件的概率
 
     public static int NextId=-1;
     public static bool inSeries;
