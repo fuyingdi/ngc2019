@@ -11,6 +11,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
     public TextMeshProUGUI OptionBText;
     public GameObject DoorLeft;
     public GameObject DoorRight;
+    public Slider ProgressBar;
     public float DoorSpeed = 10f;
 
     public static GameEvent currentEvent;//当前的事件
@@ -55,6 +56,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
         else
             ShowBox.text = currentEvent.ResultTextB;
         //isWaitForNext = true;
+        ProgressBar.value++;
     }
 
     private void Update()
@@ -67,7 +69,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
         {
             isWaitForNext = false;
             MoveDoor();
-            Invoke("ShowNewEvent", 0.8f);
+            Invoke("ShowNewEvent", 0.4f);
 
         }
     }

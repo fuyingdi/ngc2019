@@ -13,7 +13,22 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if(Player.People<=0)
+        {
+            PeopleFail();
+        }
+        if(Player.Policy<=0)
+        {
+            PolicyFail();
+        }
+        if(Player.Economic<=0)
+        {
+            EconomicFail();
+        }
+        if(Player.Military<=0)
+        {
+            MilitaryFail();
+        }
     }
 
 
