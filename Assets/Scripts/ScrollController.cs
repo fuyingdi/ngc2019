@@ -14,7 +14,7 @@ public class ScrollController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("fff");
+
         TargetY = 380f;
         OriginY = 80f;
         //StartCoroutine("ExpandScroll");
@@ -30,7 +30,7 @@ public class ScrollController : MonoBehaviour
 
     public void RollScroll()
     {
-        Debug.Log("!");
+
         StartCoroutine("rollScroll");
     }
     public void ExpandScroll()
