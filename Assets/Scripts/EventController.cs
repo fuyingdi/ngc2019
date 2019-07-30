@@ -13,6 +13,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
     public GameObject DoorRight;
     public Slider ProgressBar;
     public float DoorSpeed = 10f;
+    public AnimationCurve ProgressBarEase;
 
     public static GameEvent currentEvent;//当前的事件
     private int currentEventID = 0;//当前事件ID号
@@ -56,15 +57,17 @@ public class EventController : MonoBehaviour/*事件控制器*/
         else
             ShowBox.text = currentEvent.ResultTextB;
         //isWaitForNext = true;
-        ProgressBar.value++;
+
+        Player.ProgressValue++;
+        UpdateProgressBar();
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D))
-        {
-            MoveDoor();
-        }
+        //if(Input.GetKeyDown(KeyCode.D))
+        //{
+        //    MoveDoor();
+        //}
         if (isWaitForNext && Input.GetMouseButtonDown(0))//当鼠标按下后抬起
         {
             isWaitForNext = false;
@@ -77,6 +80,10 @@ public class EventController : MonoBehaviour/*事件控制器*/
     void MoveDoor()
     {
         StartCoroutine("DoorAnimation");
+    }
+    void UpdateProgressBar()
+    {
+        StartCoroutine("ProgressBarAnimation");
     }
 
     IEnumerator DoorAnimation()
@@ -97,10 +104,18 @@ public class EventController : MonoBehaviour/*事件控制器*/
             DoorRight.transform.Translate(Vector2.right * DoorSpeed * Time.deltaTime);
             yield return null;
         }
+    }
 
-
-
-
-
+    IEnumerator ProgressBarAnimation()
+    {
+        float _from = ProgressBar.value;
+        float _to = ProgressBar.value+1;
+        int _time = 50;
+        for(int i =0;i<_time;i++)
+        {
+            float x = (float)i / (float)_time;
+            ProgressBar.value = Mathf.Lerp(_from, _to, ProgressBarEase.Evaluate(x));
+            yield return null;
+        }
     }
 }

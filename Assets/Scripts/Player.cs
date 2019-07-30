@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private void Start()
+    public static int ProgressValue = 0;
+    private void Awake()
     {
 
         SetAllValue(50, 50, 50, 50);
-
+        ProgressValue = 0;
     }
     public static int People
     {
