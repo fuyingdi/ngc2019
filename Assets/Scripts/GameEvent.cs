@@ -41,3 +41,8 @@ public class SerialGameEvent:GameEvent
     public int NextID_B;
     public bool IsBegin;
 }
+
+public class KeyEvent:GameEvent
+{
+        
+}

@@ -9,12 +9,14 @@ public class EventCreator : MonoBehaviour
     public string JsonString;
     public static List<GameEvent> GameEvents= new List<GameEvent>();  //游戏事件池
     public static List<SerialGameEvent> SerialGameEvents= new List<SerialGameEvent>();  //连续事件池
+    public static List<GameEvent> KeyEvents= new List<GameEvent>();  //关键事件池
 
     public static bool[] isEventUsed;
     public static bool[] isSerialEventUsed;
 
     public static int EventCount;
     public static int SerialEventCount;
+    public static int KeyCount;
 
     public static float SerialEventRate=0.01f; // 生成连续事件的概率
 
@@ -27,13 +29,22 @@ public class EventCreator : MonoBehaviour
     {
         //生成普通事件池
         JsonString = File.ReadAllText(Application.dataPath + "\\Resources\\Events.json");
-        JsonData EventData = JsonMapper.ToObject(JsonString);
+        // JsonData EventData = JsonMapper.ToObject(JsonString);
         GameEvents = JsonMapper.ToObject<List<GameEvent>>(JsonString);
 
         //生成连续事件的事件池
         JsonString = File.ReadAllText(Application.dataPath + "\\SerialEvents.json");
-        JsonData SerialEventData = JsonMapper.ToObject(JsonString);
+        // JsonData SerialEventData = JsonMapper.ToObject(JsonString);
         SerialGameEvents = JsonMapper.ToObject<List<SerialGameEvent>>(JsonString);
+
+        //生成关键事件的事件池
+        if(File.Exists(Application.dataPath+"\\Resources\\KeyEvents.json"))
+        {
+            JsonString = File.ReadAllText(Application.dataPath + "\\Resources\\KeyEvents.json");
+            JsonData KeyEventData = JsonMapper.ToObject(JsonString);
+            KeyEvents = JsonMapper.ToObject<List<GameEvent>>(JsonString);
+            KeyCount = KeyEvents.Count;
+        }
 
         EventCount = GameEvents.Count;
         SerialEventCount = SerialGameEvents.Count;
@@ -60,11 +71,6 @@ public class EventCreator : MonoBehaviour
         #endregion
     }
 
-    void Update()
-    {
-
-        
-    }
 
     public static GameEvent GetGameEvent()
     {
