@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
 
-        SetAllValue(50, 50, 50, 50);
+        //SetAllValue(80, 80, 80, 80);
         ProgressValue = 0;
     }
     public static int People

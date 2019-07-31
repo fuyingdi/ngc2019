@@ -31,7 +31,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
 
     private void Awake()
     {
-        Player.Economic = Player.People = Player.Policy = Player.Military = 50;
+        Player.Economic = Player.People = Player.Policy = Player.Military = 80;
     }
 
     private void Start()

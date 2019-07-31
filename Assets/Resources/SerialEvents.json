@@ -1,0 +1,98 @@
+﻿[
+  {
+    "EventID": 0,
+    "ImageIndex": 0,
+    "ShowText": "大将军在攻打西戎国时掠到一美丽女子，您是否要纳入",
+    "ResultTextA": "这个美丽的妃子进入了你的后宫。",
+    "ResultTextB": "大将军最终把她接入了将军府。",
+    "OptionTextA": "甚好。",
+    "OptionTextB": "你是想要误国吗？",
+    "Changes_A": {
+      "people": 0,
+      "policy": -10,
+      "economic": -10,
+      "military": -10
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 10,
+      "economic": 0,
+      "military": -15
+    },
+    "NextID_A": 1,
+    "NextID_B": 2,
+    "isBegin": true
+  },
+  {
+    "EventID": 1,
+    "ImageIndex": 4,
+    "ShowText": "皇后认为此女太过妖媚，陛下是否让嫔妾考验她一番。",
+    "ResultTextA": "皇后出于嫉妒，命亲信害死了她，你毫无办法。",
+    "ResultTextB": "此女在后宫兴风作浪，你忙于国事毫无办法。",
+    "OptionTextA": "那便辛苦皇后了。",
+    "OptionTextB": "她端庄自持，大可不必。",
+    "Changes_A": {
+      "people": -10,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": 3,
+    "isBegin": false
+  },
+  {
+    "EventID": 2,
+    "ImageIndex": 0,
+    "ShowText": "大将军沉迷于女色，边陲日益动荡是否下召警醒。",
+    "ResultTextA": "一月过去，情况并没有好转，边关接连传来败报，北狄的军队很快要兵临城下，你的国家要晚了。",
+    "ResultTextB": "大将军不负皇恩，幡然醒悟，将此女送回民间。",
+    "OptionTextA": "将军只是一时松懈，不必过于敏感.",
+    "OptionTextB": "\"为将者怎能好色误事，送我虎符警示。\"",
+    "Changes_A": {
+      "people": 0,
+      "policy": -100,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 10,
+      "economic": 10,
+      "military": 10
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "isBegin": false
+  },
+  {
+    "EventID": 3,
+    "ImageIndex": 7,
+    "ShowText": "这个女人知道古上善国的宝藏在哪，你想知道吗，要用她的性命交换？",
+    "ResultTextA": "穷奇撕碎了你可怜的妃子，血腥气一月才散去。",
+    "ResultTextB": "你的宠妃都看在眼里，她大为感动，原来这些天的任性都是她在考验你，你得知了宝藏位置。",
+    "OptionTextA": "朕的想知道宝藏在何处。",
+    "OptionTextB": "朕国库充盈，不必你费心了。",
+    "Changes_A": {
+      "people": -20,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 0,
+      "economic": 30,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "isBegin": false
+  }
+]

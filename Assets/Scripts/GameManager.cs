@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using LitJson;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,12 +12,16 @@ public class GameManager : MonoBehaviour
     {
         public int EventCount;
     }
+    public GameObject[] FailImages;
+    bool isFail;
 
     void Start()
     {
         string ConfigJsonString = File.ReadAllText(Application.dataPath + "\\Resources\\config.json");
         Config GameConfig = JsonMapper.ToObject<Config>(ConfigJsonString);
         GameObject.Find("ProgressBar").GetComponent<Slider>().maxValue = GameConfig.EventCount;
+
+        isFail = false;
 
         
     }
@@ -25,19 +30,26 @@ public class GameManager : MonoBehaviour
     {
         if(Player.People<=0)
         {
-            PeopleFail();
+            Invoke("PeopleFail",0.5f);
         }
         if(Player.Policy<=0)
         {
-            PolicyFail();
+            Invoke("PolicyFail", 0.5f);
         }
         if(Player.Economic<=0)
         {
-            EconomicFail();
+            Invoke("EconomicFail", 0.5f);
         }
-        if(Player.Military<=0)
+        if (Player.Military<=0)
         {
-            MilitaryFail();
+            Invoke("MilitaryFail", 0.5f);
+        }
+        if (isFail)
+        {
+            if(Input.GetMouseButton(0))
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 
@@ -45,19 +57,23 @@ public class GameManager : MonoBehaviour
     #region GameOver
     void PeopleFail()
     {
-
+        FailImages[0].SetActive(true);
+        isFail = true;
     }
     void PolicyFail()
     {
-
+        isFail = true;
+        FailImages[1].SetActive(true);
     }
     void EconomicFail()
     {
-
+        isFail = true;
+        FailImages[2].SetActive(true);
     }
     void MilitaryFail()
     {
-
+        isFail = true;
+        FailImages[3].SetActive(true);
     }
     #endregion
 
