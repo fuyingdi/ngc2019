@@ -14,6 +14,8 @@ public class EventController : MonoBehaviour/*事件控制器*/
     public Slider ProgressBar;
     public float DoorSpeed = 10f;
     public AnimationCurve ProgressBarEase;
+    public AnimationCurve MaskCurve;
+    public GameObject Mask;
 
     public static GameEvent currentEvent;//当前的事件
     private int currentEventID = 0;//当前事件ID号
@@ -72,7 +74,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
         {
             isWaitForNext = false;
             MoveDoor();
-            Invoke("ShowNewEvent", 0.4f);
+            Invoke("ShowNewEvent", 0.8f);
 
         }
     }
@@ -92,18 +94,28 @@ public class EventController : MonoBehaviour/*事件控制器*/
         float leftTarget = -6.2f;
         float rightOrigin = -1.4f;
         float rightTarget = -2.4f;
+        float x = 0;
         while(DoorLeft.transform.localPosition.x<leftTarget||DoorRight.transform.localPosition.x>rightTarget)
         {
             DoorLeft.transform.Translate(Vector2.right * DoorSpeed*Time.deltaTime);
             DoorRight.transform.Translate(Vector2.left * DoorSpeed*Time.deltaTime);
+            Mask.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, MaskCurve.Evaluate(x));
+            x += Time.deltaTime;
             yield return null;
         }
-        while(DoorLeft.transform.localPosition.x>leftOrigin||DoorRight.transform.localPosition.x<rightOrigin)
+
+        //Mask.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+
+        while (DoorLeft.transform.localPosition.x>leftOrigin||DoorRight.transform.localPosition.x<rightOrigin)
         {
             DoorLeft.transform.Translate(Vector2.left * DoorSpeed * Time.deltaTime);
             DoorRight.transform.Translate(Vector2.right * DoorSpeed * Time.deltaTime);
+            Mask.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, MaskCurve.Evaluate(x));
+            x += Time.deltaTime;
+            print(x);
             yield return null;
         }
+        print(x);
     }
 
     IEnumerator ProgressBarAnimation()
