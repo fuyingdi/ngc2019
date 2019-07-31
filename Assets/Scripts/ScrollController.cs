@@ -30,12 +30,12 @@ public class ScrollController : MonoBehaviour
 
     public void RollScroll()
     {
-
+        AudiosController.ScrollUp();
         StartCoroutine("rollScroll");
     }
     public void ExpandScroll()
     {
-        expandScroll();
+        AudiosController.ScrollDown();
         StartCoroutine("expandScroll");
     }
 

@@ -42,8 +42,8 @@ public class EventController : MonoBehaviour/*事件控制器*/
 
     public void ShowNewEvent()
     {
-
         currentEvent = EventCreator.GetGameEvent();//获取事件
+        AudiosController.ChangeEvent(currentEvent.ImageIndex);
         ShowBox.text = currentEvent.ShowText;
         OptionAText.text = currentEvent.OptionTextA;
         OptionBText.text = currentEvent.OptionTextB;
@@ -81,6 +81,7 @@ public class EventController : MonoBehaviour/*事件控制器*/
 
     void MoveDoor()
     {
+        AudiosController.DoorMove();
         StartCoroutine("DoorAnimation");
     }
     void UpdateProgressBar()
