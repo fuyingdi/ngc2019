@@ -88,10 +88,10 @@ public class EventController : MonoBehaviour/*事件控制器*/
 
     IEnumerator DoorAnimation()
     {
-        float leftOrigin = -8.1f;
-        float leftTarget = -5.5f;
-        float rightOrigin = -0.53f;
-        float rightTarget = -2.8f;
+        float leftOrigin = -10f;
+        float leftTarget = -6.2f;
+        float rightOrigin = -1.4f;
+        float rightTarget = -2.4f;
         while(DoorLeft.transform.localPosition.x<leftTarget||DoorRight.transform.localPosition.x>rightTarget)
         {
             DoorLeft.transform.Translate(Vector2.right * DoorSpeed*Time.deltaTime);

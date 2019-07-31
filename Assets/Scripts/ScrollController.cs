@@ -16,7 +16,7 @@ public class ScrollController : MonoBehaviour
     {
 
         TargetY = 380f;
-        OriginY = 80f;
+        OriginY = 120f;
         //StartCoroutine("ExpandScroll");
         //StartCoroutine("RollScroll");
     }
