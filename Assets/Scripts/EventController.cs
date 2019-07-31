@@ -113,10 +113,9 @@ public class EventController : MonoBehaviour/*事件控制器*/
             DoorRight.transform.Translate(Vector2.right * DoorSpeed * Time.deltaTime);
             Mask.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, MaskCurve.Evaluate(x));
             x += Time.deltaTime;
-            print(x);
+
             yield return null;
         }
-        print(x);
     }
 
     IEnumerator ProgressBarAnimation()

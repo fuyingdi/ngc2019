@@ -21,7 +21,7 @@
     },
     "NextID_A": 1,
     "NextID_B": 2,
-    "isBegin": true
+    "IsBegin": true
   },
   {
     "EventID": 1,
@@ -45,7 +45,7 @@
     },
     "NextID_A": -1,
     "NextID_B": 3,
-    "isBegin": false
+    "IsBegin": false
   },
   {
     "EventID": 2,
@@ -54,7 +54,7 @@
     "ResultTextA": "一月过去，情况并没有好转，边关接连传来败报，北狄的军队很快要兵临城下，你的国家要晚了。",
     "ResultTextB": "大将军不负皇恩，幡然醒悟，将此女送回民间。",
     "OptionTextA": "将军只是一时松懈，不必过于敏感.",
-    "OptionTextB": "\"为将者怎能好色误事，送我虎符警示。\"",
+    "OptionTextB": "为将者怎能好色误事，送我虎符警示。",
     "Changes_A": {
       "people": 0,
       "policy": -100,
@@ -69,7 +69,7 @@
     },
     "NextID_A": -1,
     "NextID_B": -1,
-    "isBegin": false
+    "IsBegin": false
   },
   {
     "EventID": 3,
@@ -93,6 +93,414 @@
     },
     "NextID_A": -1,
     "NextID_B": -1,
-    "isBegin": false
+    "IsBegin": false
+  },
+  {
+    "EventID": 4,
+    "ImageIndex": 5,
+    "ShowText": "陛下，我们番邦国有陨石降下，里面含有稀世金属，您是否想要用来打造神兵利器？",
+    "ResultTextA": "一周后，这块陨石被带入京城。",
+    "ResultTextB": "京城武库收到了半块陨石",
+    "OptionTextA": "派人全部搬来。",
+    "OptionTextB": "我们共享它。",
+    "Changes_A": {
+      "people": 10,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 5,
+    "NextID_B": 6,
+    "IsBegin": true
+  },
+  {
+    "EventID": 5,
+    "ImageIndex": 1,
+    "ShowText": "这块陨石到达了京城冶铁处，冶铁处的许多士兵病倒了，这究竟是？",
+    "ResultTextA": "番邦使者说，他们的人民也出现了类似的情况。",
+    "ResultTextB": "番邦人在进贡前将陨石内加入了一种特质的毒药，你的士兵病倒了很多。",
+    "OptionTextA": "难道是番邦的阴谋？",
+    "OptionTextB": "难道是中原人不耐受这天外来物？",
+    "Changes_A": {
+      "people": 0,
+      "policy": 10,
+      "economic": 0,
+      "military": -10
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": -10,
+      "economic": 0,
+      "military": -10
+    },
+    "NextID_A": 7,
+    "NextID_B": 8,
+    "IsBegin": false
+  },
+  {
+    "EventID": 6,
+    "ImageIndex": 1,
+    "ShowText": "冶铁处有少量士兵病倒了，您怀疑？",
+    "ResultTextA": "番邦的好心却引起您的怀疑，您与番邦政治交恶。",
+    "ResultTextB": "金属含有中原人不耐受的毒性，但是却打造了神兵利器。",
+    "OptionTextA": "难道是番邦的阴谋？",
+    "OptionTextB": "难道是中原人不耐受这天外来物？",
+    "Changes_A": {
+      "people": 0,
+      "policy": -15,
+      "economic": 0,
+      "military": -5
+    },
+    "Changes_B": {
+      "people": 5,
+      "policy": 5,
+      "economic": 0,
+      "military": 15
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 7,
+    "ImageIndex": 0,
+    "ShowText": "这是一种很少见的毒药，我们应该责问番邦的罪过并使其交出解药。",
+    "ResultTextA": "王城的士兵病倒了很多，无法作战，还遭到了番邦的偷袭。",
+    "ResultTextB": "使者在丞相的计谋下交出了解药，你的士兵得救了。",
+    "OptionTextA": "武力威胁。",
+    "OptionTextB": "召使者进宫。",
+    "Changes_A": {
+      "people": -5,
+      "policy": -10,
+      "economic": -5,
+      "military": -20
+    },
+    "Changes_B": {
+      "people": 5,
+      "policy": 10,
+      "economic": 0,
+      "military": 10
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 8,
+    "ImageIndex": 0,
+    "ShowText": "番邦人用心狠毒，是否开战？",
+    "ResultTextA": "中毒的士兵日益增多，我军不敌番邦军队，对方已兵临城下。",
+    "ResultTextB": "丞相用计谋骗取了解药，我军兵力得到保留。",
+    "OptionTextA": "举兵进攻。",
+    "OptionTextB": "防守不攻。",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": -100
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 10,
+      "economic": 0,
+      "military": 15
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 9,
+    "ImageIndex": 3,
+    "ShowText": "草民在民间寻得七颗橙色发光宝珠献给陛下。",
+    "ResultTextA": "什么都没有发生，你大概是脑子有问题。",
+    "ResultTextB": "什么都没有发生，你大概是脑子有问题。",
+    "OptionTextA": "把宝珠摆成北斗七星形状。",
+    "OptionTextB": "把宝珠摆成三角形。",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 10,
+    "NextID_B": 10,
+    "IsBegin": true
+  },
+  {
+    "EventID": 10,
+    "ImageIndex": 0,
+    "ShowText": "陛下试着再喊些什么？",
+    "ResultTextA": "金光四射，神龙出现在皇宫上空。",
+    "ResultTextB": "什么都没有发生，庶民看你的眼神怪怪的。",
+    "OptionTextA": "“出来吧，神龙！”",
+    "OptionTextB": "“出来吧，皮卡丘！”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 11,
+    "NextID_B": 12,
+    "IsBegin": false
+  },
+  {
+    "EventID": 11,
+    "ImageIndex": 6,
+    "ShowText": "你想要实现什么愿望？",
+    "ResultTextA": "你获得了大量金银财宝。",
+    "ResultTextB": "百姓突然感到很幸福。",
+    "OptionTextA": "财富。",
+    "OptionTextB": "我想要我的百姓安居乐业。",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 30,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 30,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 12,
+    "ImageIndex": 0,
+    "ShowText": "请陛下正经一点……",
+    "ResultTextA": "金光四射，神龙出现在皇宫上空。",
+    "ResultTextB": "你突然穿上了粉色的女装。",
+    "OptionTextA": "“出来吧，神龙！”",
+    "OptionTextB": "“巴拉拉能量，沙罗沙罗！”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 11,
+    "NextID_B": 13,
+    "IsBegin": false
+  },
+  {
+    "EventID": 13,
+    "ImageIndex": 0,
+    "ShowText": "……",
+    "ResultTextA": "金光四射，神龙出现在皇宫上空。",
+    "ResultTextB": "金光四射，神龙出现在皇宫上空。",
+    "OptionTextA": "“出来吧，神龙！”",
+    "OptionTextB": "“出来吧，神龙！”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 11,
+    "NextID_B": 11,
+    "IsBegin": false
+  },
+  {
+    "EventID": 14,
+    "ImageIndex": 7,
+    "ShowText": "贤明的君主啊，接受我的考验吧",
+    "ResultTextA": "皇宫上空乌云密布。",
+    "ResultTextB": "“憋跟我扯犊子！”",
+    "OptionTextA": "放马过来！",
+    "OptionTextB": "来了老弟？",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 15,
+    "NextID_B": 16,
+    "IsBegin": true
+  },
+  {
+    "EventID": 15,
+    "ImageIndex": 7,
+    "ShowText": "什么东西早上四条腿，中午两条腿，晚上三条腿？",
+    "ResultTextA": "算你通过了第一关，接下来会更加凶险！",
+    "ResultTextB": "穷奇吃掉了十个百姓。",
+    "OptionTextA": "人。",
+    "OptionTextB": "桌子。",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 17,
+    "NextID_B": 17,
+    "IsBegin": false
+  },
+  {
+    "EventID": 16,
+    "ImageIndex": 7,
+    "ShowText": "小龙虾属于什么垃圾？",
+    "ResultTextA": "侬是上海人吗？",
+    "ResultTextB": "罚款五十元。",
+    "OptionTextA": "湿垃圾",
+    "OptionTextB": "干垃圾",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": -10,
+      "military": 0
+    },
+    "NextID_A": 20,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 17,
+    "ImageIndex": 7,
+    "ShowText": "春秋战国时期诸子百家的改革都强调什么特性？",
+    "ResultTextA": "算你通过了这一关，接下来会更加凶险！",
+    "ResultTextB": "穷奇吃掉一个营士兵。",
+    "OptionTextA": "以人为本",
+    "OptionTextB": "以德治国",
+    "Changes_A": {
+      "people": 10,
+      "policy": 10,
+      "economic": 10,
+      "military": 10
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": -10
+    },
+    "NextID_A": 18,
+    "NextID_B": 18,
+    "IsBegin": false
+  },
+  {
+    "EventID": 18,
+    "ImageIndex": 7,
+    "ShowText": "我长得像什么？",
+    "ResultTextA": "算你通过了这一关，接下来会更加凶险！",
+    "ResultTextB": "穷奇吃掉了一批朝臣。",
+    "OptionTextA": "虎",
+    "OptionTextB": "牛",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 19,
+    "NextID_B": 19,
+    "IsBegin": false
+  },
+  {
+    "EventID": 19,
+    "ImageIndex": 7,
+    "ShowText": "谁不是神龙的儿子？",
+    "ResultTextA": "你通过了我的所有考验，我还会回来的。",
+    "ResultTextB": "穷奇吃掉了你国库中的金子。转身飞走了。",
+    "OptionTextA": "囚牛",
+    "OptionTextB": "毕方",
+    "Changes_A": {
+      "people": 10,
+      "policy": 10,
+      "economic": 10,
+      "military": 10
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": -10,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 20,
+    "ImageIndex": 7,
+    "ShowText": "想来点正经的吗？",
+    "ResultTextA": "愚蠢的君王啊这条路很艰难，哈哈哈",
+    "ResultTextB": "再见老弟儿！",
+    "OptionTextA": "想",
+    "OptionTextB": "不想",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 15,
+    "NextID_B": -1,
+    "IsBegin": false
   }
 ]

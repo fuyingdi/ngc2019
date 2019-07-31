@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     }
     public GameObject[] FailImages;
     bool isFail;
+    public GameObject[] Sliders;
 
     void Start()
     {
@@ -28,21 +29,22 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(Player.People<=0)
+        print(Sliders[3].GetComponent<Slider>().value);
+        if (Sliders[0].GetComponent<Slider>().value <= 0)
         {
-            Invoke("PeopleFail",0.5f);
+            Invoke("PeopleFail", 2f);
         }
-        if(Player.Policy<=0)
+        if (Sliders[1].GetComponent<Slider>().value <= 0)
         {
-            Invoke("PolicyFail", 0.5f);
+            Invoke("PolicyFail", 2f);
         }
-        if(Player.Economic<=0)
+        if (Sliders[2].GetComponent<Slider>().value <= 0)
         {
-            Invoke("EconomicFail", 0.5f);
+            Invoke("EconomicFail", 2f);
         }
-        if (Player.Military<=0)
+        if (Sliders[3].GetComponent<Slider>().value <= 0)
         {
-            Invoke("MilitaryFail", 0.5f);
+            Invoke("MilitaryFail", 2f);
         }
         if (isFail)
         {
@@ -51,6 +53,12 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
+        //print(Player.People);
+        //print(Player.Policy);
+        //print(Player.Economic);
+        //print(Player.Military);
+
+
     }
 
 

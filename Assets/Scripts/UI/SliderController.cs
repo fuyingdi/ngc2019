@@ -32,7 +32,8 @@ public class SliderController : MonoBehaviour
                     case "People":
                         if (Mathf.Abs(slider.value - targetValue[(int)Value.people]) > 1)
                         {
-                            slider.value += (slider.value < targetValue[(int)Value.people]) ? speed.Evaluate(time) : -speed.Evaluate(time);
+                            float _factor = Mathf.Abs(slider.value - targetValue[(int)Value.people])/10f;
+                            slider.value += (slider.value < targetValue[(int)Value.people]) ? speed.Evaluate(time)*_factor : -speed.Evaluate(time)*_factor;
                             targetValueReached = false;
                         }
                         else
@@ -43,7 +44,8 @@ public class SliderController : MonoBehaviour
                     case "Economic":
                         if (Mathf.Abs(slider.value - targetValue[(int)Value.economic]) > 1)
                         {
-                            slider.value += (slider.value < targetValue[(int)Value.economic]) ? speed.Evaluate(time) : -speed.Evaluate(time);
+                            float _factor = Mathf.Abs(slider.value - targetValue[(int)Value.economic]) / 10f;
+                            slider.value += (slider.value < targetValue[(int)Value.economic]) ? speed.Evaluate(time) * _factor : -speed.Evaluate(time) * _factor;
                             targetValueReached = false;
                         }
                         else
@@ -54,7 +56,9 @@ public class SliderController : MonoBehaviour
                     case "Military":
                         if (Mathf.Abs(slider.value - targetValue[(int)Value.military]) > 1)
                         {
-                            slider.value += (slider.value < targetValue[(int)Value.military]) ? speed.Evaluate(time) : -speed.Evaluate(time);
+                            print(Mathf.Abs(slider.value - targetValue[(int)Value.military]));
+                            float _factor = Mathf.Abs(slider.value - targetValue[(int)Value.military]) / 10f;
+                            slider.value += (slider.value < targetValue[(int)Value.military]) ? speed.Evaluate(time) * _factor : -speed.Evaluate(time) * _factor;
                             targetValueReached = false;
                         }
                         else
@@ -65,7 +69,8 @@ public class SliderController : MonoBehaviour
                     case "Policy":
                         if (Mathf.Abs(slider.value - targetValue[(int)Value.policy]) > 1)
                         {
-                            slider.value += (slider.value < targetValue[(int)Value.policy]) ? speed.Evaluate(time) : -speed.Evaluate(time);
+                            float _factor = Mathf.Abs(slider.value - targetValue[(int)Value.policy]) / 10f;
+                            slider.value += (slider.value < targetValue[(int)Value.policy]) ? speed.Evaluate(time) * _factor : -speed.Evaluate(time) * _factor;
                             targetValueReached = false;
                         }
                         else
