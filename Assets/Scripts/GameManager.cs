@@ -11,16 +11,22 @@ public class GameManager : MonoBehaviour
     public class Config
     {
         public int EventCount;
+        public double SpecialEventRate;
     }
     public GameObject[] FailImages;
-    bool isFail;
+    public GameObject WinImage;
+    public static bool isFail;
+    public static bool isWin;
+
     public GameObject[] Sliders;
+    public static Config GameConfig;
 
     void Start()
     {
         string ConfigJsonString = File.ReadAllText(Application.dataPath + "\\Resources\\config.json");
-        Config GameConfig = JsonMapper.ToObject<Config>(ConfigJsonString);
+        GameConfig = JsonMapper.ToObject<Config>(ConfigJsonString);
         GameObject.Find("ProgressBar").GetComponent<Slider>().maxValue = GameConfig.EventCount;
+        EventCreator.SerialEventRate = (float)GameConfig.SpecialEventRate;
 
         isFail = false;
 
@@ -29,30 +35,35 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        print(Player.People);
-        if (Sliders[0].GetComponent<Slider>().value <= 0)
+        if (Player.People<=0)
         {
-            Invoke("PeopleFail", 2f);
+            Invoke("PeopleFail", 2.5f);
         }
-        if (Sliders[1].GetComponent<Slider>().value <= 0)
+        if (Player.Policy<= 0)
         {
-            Invoke("PolicyFail", 2f);
+            Invoke("PolicyFail", 2.5f);
         }
-        if (Sliders[2].GetComponent<Slider>().value <= 0)
+        if (Player.Economic <= 0)
         {
-            Invoke("EconomicFail", 2f);
+            Invoke("EconomicFail", 2.5f);
         }
-        if (Sliders[3].GetComponent<Slider>().value <= 0)
+        if (Player.Military <= 0)
         {
-            Invoke("MilitaryFail", 2f);
+            Invoke("MilitaryFail", 2.5f);
         }
-        if (isFail)
+        if (isFail||isWin)
         {
             if(Input.GetMouseButton(0))
             {
                 SceneManager.LoadScene(0);
             }
         }
+
+        if (Player.ProgressValue >= GameConfig.EventCount && EventCreator.NextId == -1) 
+        {
+            Invoke("Win", 2f);
+        }
+
         //print(Player.People);
         //print(Player.Policy);
         //print(Player.Economic);
@@ -67,27 +78,37 @@ public class GameManager : MonoBehaviour
     {
         FailImages[0].SetActive(true);
         isFail = true;
+        AudiosController.GameOver();
     }
     void PolicyFail()
     {
         isFail = true;
         FailImages[1].SetActive(true);
+        AudiosController.GameOver();
+
     }
     void EconomicFail()
     {
         isFail = true;
         FailImages[2].SetActive(true);
+        AudiosController.GameOver();
+
     }
     void MilitaryFail()
     {
         isFail = true;
         FailImages[3].SetActive(true);
+        AudiosController.GameOver();
+
     }
     #endregion
 
     #region
     void Win()
     {
+        AudiosController.GameWin();
+        WinImage.SetActive(true);
+        isWin = true;
 
     }
     #endregion

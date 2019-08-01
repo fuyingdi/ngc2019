@@ -30,7 +30,7 @@ public class SliderController : MonoBehaviour
         }
         else
         {
-            slider.value += (value - slider.value) * 0.1f;
+            slider.value += (value - slider.value) * 0.1f * speed.Evaluate(Time.time);
         }
 
     }

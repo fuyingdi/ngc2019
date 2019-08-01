@@ -30,6 +30,7 @@ public class EventCreator : MonoBehaviour
 
     void Awake()
     {
+        print(SerialEventRate);
         //生成普通事件池
         JsonString = File.ReadAllText(Application.dataPath + "\\Resources\\Events.json");
         // JsonData EventData = JsonMapper.ToObject(JsonString);
