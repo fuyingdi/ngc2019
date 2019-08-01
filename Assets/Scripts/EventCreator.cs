@@ -27,6 +27,9 @@ public class EventCreator : MonoBehaviour
     public static bool inSeries;
     public static SerialGameEvent CurrentEvent;
 
+    public static float UpFactor;
+    public static float DownFactor;
+
 
     void Awake()
     {
@@ -50,19 +53,8 @@ public class EventCreator : MonoBehaviour
             KeyCount = KeyEvents.Count;
         }
 
-        foreach(SerialGameEvent e in SerialGameEvents)
-        {
-            //Type t = e.GetType();
-            //PropertyInfo[] PropertyList = t.GetProperties();
-            //foreach (PropertyInfo item in PropertyList)
-            //{
-            //    string name = item.Name;
-            //    object value = item.GetValue(e, null);
-            //    print(name + ":" + value.ToString());
-            //}
-            print(e.IsBegin);
-            print(".............");
-        }
+        //乘上配置文件中的因数
+        AddFactor();
 
         EventCount = GameEvents.Count;
         SerialEventCount = SerialGameEvents.Count;
@@ -89,6 +81,23 @@ public class EventCreator : MonoBehaviour
         #endregion
     }
 
+    void AddFactor()
+    {
+        foreach (GameEvent e in GameEvents)
+        {
+            e.Changes_A.policy *= (int)(e.Changes_A.policy >= 0 ? UpFactor : DownFactor);
+            e.Changes_A.people *= (int)(e.Changes_A.people >= 0 ? UpFactor : DownFactor);
+            e.Changes_A.economic *= (int)(e.Changes_A.economic >= 0 ? UpFactor : DownFactor);
+            e.Changes_A.military *= (int)(e.Changes_A.military >= 0 ? UpFactor : DownFactor);
+        }
+        foreach (SerialGameEvent e in SerialGameEvents)
+        {
+            e.Changes_A.policy *= (int)(e.Changes_A.policy >= 0 ? UpFactor : DownFactor);
+            e.Changes_A.people *= (int)(e.Changes_A.people >= 0 ? UpFactor : DownFactor);
+            e.Changes_A.economic *= (int)(e.Changes_A.economic >= 0 ? UpFactor : DownFactor);
+            e.Changes_A.military *= (int)(e.Changes_A.military >= 0 ? UpFactor : DownFactor);
+        }
+    }
 
     public static GameEvent GetGameEvent()
     {

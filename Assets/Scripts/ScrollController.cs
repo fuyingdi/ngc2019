@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ScrollController : MonoBehaviour
 {
     public Button[] Scrolls;
-    public float TargetY = 310f;
-    public float OriginY = 40f;
+    public float TargetY = 380f;
+    public float OriginY = 80f;
 
     public float speed = 1f;
     public AnimationCurve CurveSpeed;
@@ -15,8 +15,7 @@ public class ScrollController : MonoBehaviour
     void Start()
     {
 
-        TargetY = 380f;
-        OriginY = 120f;
+
         //StartCoroutine("ExpandScroll");
         //StartCoroutine("RollScroll");
     }

@@ -11,6 +11,10 @@ public class AudiosController : MonoBehaviour
     public AudioSource BGMaudioSource;
     private static AudioSource _BGMaudioSource;
 
+    private void Start()
+    {
+        PlayBGM();
+    }
     /// <summary>
     /// 背景音乐
     /// </summary>
@@ -205,6 +209,9 @@ public class AudiosController : MonoBehaviour
             case 7:
                 PlayAudio(_character[(int)Character.qiongQi]);
                 break;
+            case 8:
+                PlayAudio(_character[8]);
+                break;
         }
     }
 
@@ -213,6 +220,7 @@ public class AudiosController : MonoBehaviour
     /// </summary>
     public static void GameWin()
     {
+        _audioSource.Pause();
         _BGMaudioSource.volume = 0.5f;
         _BGMaudioSource.clip = _win;//设置要播放的声音为游戏胜利
         if (!_BGMaudioSource.isPlaying)//当游戏胜利的音效没有在播放
@@ -226,6 +234,7 @@ public class AudiosController : MonoBehaviour
     /// </summary>
     public static void GameOver()
     {
+        _audioSource.Pause();
         _BGMaudioSource.volume = 0.5f;
         _BGMaudioSource.clip = _fail;//设置要播放的声音为游戏胜利
         if (!_BGMaudioSource.isPlaying)//当游戏胜利的音效没有在播放
@@ -236,6 +245,6 @@ public class AudiosController : MonoBehaviour
 
     private void Update()
     {
-        PlayBGM();
+        ;
     }
 }

@@ -1,4 +1,7 @@
 {
-  "EventCount": 2,
-  "SpecialEventRate": 0.5
+  "EventCount": 30,
+  "SpecialEventRate": 0.9,
+  "UpFactor": 1.5,
+  "DownFactor": 0
+
 }
