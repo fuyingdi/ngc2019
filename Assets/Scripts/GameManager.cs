@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] Sliders;
     public static Config GameConfig;
 
-    void Start()
+    void Awake()
     {
         string ConfigJsonString = File.ReadAllText(Application.dataPath + "\\Resources\\config.json");
         GameConfig = JsonMapper.ToObject<Config>(ConfigJsonString);
@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
         EventCreator.SerialEventRate = (float)GameConfig.SpecialEventRate;
 
         isFail = false;
+        isWin = false;
+        Player.ProgressValue = 0;
 
         
     }
