@@ -214,7 +214,7 @@
     "ImageIndex": 0,
     "ShowText": "皇城的士兵洗劫了商会，望陛下主持公道",
     "ResultTextA": "商会感激你的公正裁决，为你铸了一尊铜像",
-    "ResultTextB": "商会对你的做法并不买账",
+    "ResultTextB": "商会觉得这只是一种敷衍",
     "OptionTextA": "军法处置",
     "OptionTextB": "拨款给商会",
     "Changes_A": {
@@ -380,7 +380,7 @@
   {
     "EventID": 18,
     "ImageIndex": 1,
-    "ShowText": "西戎国和北狄国爆发了战争。要派出军队吗。",
+    "ShowText": "西戎国和北狄国爆发了战争。要派出军队吗？",
     "ResultTextA": "两国持续交战，两败俱伤",
     "ResultTextB": "这是夷族的圈套，你的军队被两国联合剿灭了",
     "OptionTextA": "坐山观虎斗",
@@ -394,7 +394,7 @@
     "Changes_B": {
       "people": 0,
       "policy": 0,
-      "economic": -30,
+      "economic": -25,
       "military": -30
     }
   },
@@ -407,16 +407,16 @@
     "OptionTextA": "派出使者",
     "OptionTextB": "不足为惧",
     "Changes_A": {
-      "people": 0,
-      "policy": 0,
+      "people": 5,
+      "policy": 10,
       "economic": 0,
       "military": -20
     },
     "Changes_B": {
       "people": 0,
-      "policy": 0,
-      "economic": -10,
-      "military": -10
+      "policy": 10,
+      "economic": -15,
+      "military": -20
     }
   },
   {
@@ -452,10 +452,10 @@
       "people": -15,
       "policy": 20,
       "economic": -15,
-      "military": 10
+      "military": 20
     },
     "Changes_B": {
-      "people": 0,
+      "people": -10,
       "policy": -10,
       "economic": 0,
       "military": -20
@@ -468,17 +468,17 @@
     "ResultTextA": "百姓安居乐业",
     "ResultTextB": "百姓对你不满",
     "OptionTextA": "分给百姓",
-    "OptionTextB": "补充国库",
+    "OptionTextB": "提高今年的税收",
     "Changes_A": {
       "people": 20,
-      "policy": 10,
+      "policy": 5,
       "economic": 10,
-      "military": 10
+      "military": 0
     },
     "Changes_B": {
-      "people": -10,
+      "people": -20,
       "policy": 0,
-      "economic": 30,
+      "economic": 25,
       "military": 0
     }
   },
@@ -499,15 +499,15 @@
     "Changes_B": {
       "people": 20,
       "policy": 0,
-      "economic": 30,
+      "economic": 10,
       "military": 0
     }
   },
   {
     "EventID": 24,
     "ImageIndex": 1,
-    "ShowText": "陛下，我们需要修建防御工事，防范北方的入侵。",
-    "ResultTextA": "本应修建工事的拨款不知为何落入了大将军的口袋",
+    "ShowText": "陛下，我们需要修建防御工事，防范西方的入侵。",
+    "ResultTextA": "本应修建工事的拨款被层层盘剥，最后防御工事进度缓慢",
     "ResultTextB": "无事发生",
     "OptionTextA": "同意",
     "OptionTextB": "拒绝",
@@ -515,7 +515,7 @@
       "people": 0,
       "policy": -20,
       "economic": -30,
-      "military": 0
+      "military": 10
     },
     "Changes_B": {
       "people": 0,
@@ -539,8 +539,8 @@
       "military": 0
     },
     "Changes_B": {
-      "people": 0,
-      "policy": 0,
+      "people": 10,
+      "policy": 10,
       "economic": 0,
       "military": 0
     }
@@ -554,7 +554,7 @@
     "OptionTextA": "服用",
     "OptionTextB": "不服用",
     "Changes_A": {
-      "people": 0,
+      "people": -10,
       "policy": 0,
       "economic": 0,
       "military": 0
@@ -578,21 +578,21 @@
       "people": -20,
       "policy": 0,
       "economic": 0,
-      "military": 10
+      "military": -20
     },
     "Changes_B": {
-      "people": -10,
+      "people": 10,
       "policy": -10,
-      "economic": -10,
-      "military": -20
+      "economic": -20,
+      "military": 0
     }
   },
   {
     "EventID": 28,
     "ImageIndex": 2,
-    "ShowText": "陛下，西方日不落帝国希望向我们出口鸦片烟",
-    "ResultTextA": "帝国的使臣向你进献了一大批财宝",
-    "ResultTextB": "日不落帝国向你宣战",
+    "ShowText": "陛下，西戎国希望向我们出口烟草",
+    "ResultTextA": "番邦国的使臣向你进献了一大批财宝",
+    "ResultTextB": "你的百姓的身体受到毒害",
     "OptionTextA": "同意",
     "OptionTextB": "拒绝",
     "Changes_A": {
@@ -602,15 +602,15 @@
       "military": 0
     },
     "Changes_B": {
-      "people": 0,
-      "policy": 0,
+      "people": -10,
+      "policy": -10,
       "economic": 0,
-      "military": -20
+      "military": 0
     }
   },
   {
     "EventID": 29,
-    "ImageIndex": 2,
+    "ImageIndex": 4,
     "ShowText": "陛下，我想为公主举办一场比武招亲大会",
     "ResultTextA": "有传闻说公主奇丑无比，导致招亲大会参与者寥寥无几",
     "ResultTextB": "你对公主过度保护，以至于她二十岁还没有嫁人",
@@ -638,86 +638,86 @@
     "OptionTextA": "接收难民",
     "OptionTextB": "设立哨卡，禁止难民进入",
     "Changes_A": {
-      "people": 30,
-      "policy": 0,
-      "economic": -20,
-      "military": 0
-    },
-    "Changes_B": {
-      "people": -10,
-      "policy": 0,
-      "economic": 0,
-      "military": -10
-    }
-  },
-  {
-    "EventID": 31,
-    "ImageIndex": 7,
-    "ShowText": "尘沙飞扬，黑雾弥漫，不见天日，一场地震使国家受损严重",
-    "ResultTextA": "百姓对你的救济十分感激",
-    "ResultTextB": "劳民伤财的做法让民众很不满",
-    "OptionTextA": "救济灾民",
-    "OptionTextB": "修复皇宫",
-    "Changes_A": {
       "people": 25,
       "policy": 0,
       "economic": -20,
       "military": 0
     },
     "Changes_B": {
-      "people": -25,
+      "people": -10,
+      "policy": 10,
+      "economic": -10,
+      "military": 10
+    }
+  },
+  {
+    "EventID": 31,
+    "ImageIndex": 7,
+    "ShowText": "穷奇与妖兽打闹引发了地震，尘沙飞扬，黑雾弥漫，不见天日。",
+    "ResultTextA": "百姓对你的救济十分感激",
+    "ResultTextB": "劳民伤财的做法让民众很不满",
+    "OptionTextA": "救济灾民",
+    "OptionTextB": "修复皇宫",
+    "Changes_A": {
+      "people": 20,
       "policy": 0,
-      "economic": 0,
+      "economic": -20,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -20,
+      "policy": 0,
+      "economic": -15,
       "military": 0
     }
   },
   {
     "EventID": 32,
     "ImageIndex": 1,
-    "ShowText": "建立一座长城，可以永久的抵御北方异族骚扰",
+    "ShowText": "建立一座长城，可以永久的抵御北方国家骚扰，但是会消耗大量的金钱民力。",
     "ResultTextA": "北方地区逐渐稳定",
     "ResultTextB": "你拒绝了这个劳民伤财的提议",
-    "OptionTextA": "一劳永逸",
-    "OptionTextB": "劳民伤财",
+    "OptionTextA": "修建",
+    "OptionTextB": "不修建",
     "Changes_A": {
-      "people": -25,
-      "policy": 25,
-      "economic": -20,
+      "people": -30,
+      "policy": 20,
+      "economic": -30,
       "military": 30
     },
     "Changes_B": {
-      "people": 0,
-      "policy": -10,
-      "economic": 0,
-      "military": -10
+      "people": 15,
+      "policy": 10,
+      "economic": 20,
+      "military": -20
     }
   },
   {
     "EventID": 33,
     "ImageIndex": 5,
-    "ShowText": "寡人进贡山驼以祝圣上之长寿也",
+    "ShowText": "臣进贡山驼以祝圣上之长寿也",
     "ResultTextA": "与番邦交往日益密切",
     "ResultTextB": "邻国望而未援，边境部分国土丧失",
     "OptionTextA": "赏金千两",
     "OptionTextB": "以微茶相待",
     "Changes_A": {
       "people": 0,
-      "policy": 30,
+      "policy": 25,
       "economic": -20,
-      "military": 10
+      "military": 0
     },
     "Changes_B": {
       "people": 0,
-      "policy": -25,
-      "economic": -20,
+      "policy": -20,
+      "economic": -10,
       "military": -20
     }
   },
   {
     "EventID": 34,
     "ImageIndex": 3,
-    "ShowText": "鄙人讨西某官受冤一事，愿陛下明察秋毫",
-    "ResultTextA": "你微服出访，果然查出冤情。",
+    "ShowText": "小人受冤一事，望陛下明察。",
+    "ResultTextA": "你微服出访，果然查出冤情。然而误了国事。",
     "ResultTextB": "大臣办事拖沓，此案成为悬案。",
     "OptionTextA": "亲自查证",
     "OptionTextB": "令大臣下奉县令处置",
@@ -728,8 +728,8 @@
       "military": 0
     },
     "Changes_B": {
-      "people": -10,
-      "policy": 0,
+      "people": 10,
+      "policy": -20,
       "economic": 0,
       "military": 0
     }
@@ -743,9 +743,9 @@
     "OptionTextA": "修建",
     "OptionTextB": "不修建",
     "Changes_A": {
-      "people": -30,
+      "people": -25,
       "policy": 0,
-      "economic": 30,
+      "economic": -10,
       "military": 0
     },
     "Changes_B": {
@@ -758,20 +758,20 @@
   {
     "EventID": 36,
     "ImageIndex": 2,
-    "ShowText": "陛下，吾大儿今已入殿试，此三千两白银，以敬皇上广纳贤才之智举。",
-    "ResultTextA": "殿试偏心于富绅之大儿",
-    "ResultTextB": "公平殿试，贤才上任",
-    "OptionTextA": "收下",
-    "OptionTextB": "拒收",
+    "ShowText": "陛下，吾大儿今已入朝为官，此三千两白银，以敬奉皇上广纳贤才。",
+    "ResultTextA": "富绅希望儿子能再次晋升，你不方便说拒绝",
+    "ResultTextB": "富绅被轰出去",
+    "OptionTextA": "填充国库",
+    "OptionTextB": "我只是看重他才能",
     "Changes_A": {
-      "people": 0,
-      "policy": -20,
+      "people": -20,
+      "policy": -10,
       "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": 0,
-      "policy": 20,
+      "people": 10,
+      "policy": 10,
       "economic": 0,
       "military": 0
     }
@@ -780,40 +780,40 @@
     "EventID": 37,
     "ImageIndex": 6,
     "ShowText": "今城南一带久旱逢甘露，收成丰盈富足。",
-    "ResultTextA": "民如往常，生活苟且",
-    "ResultTextB": "远境官兵心向皇，欣欣向荣驻边疆",
+    "ResultTextA": "百姓认为你很贪婪",
+    "ResultTextB": "远境官兵心感恩戴德，士气提升",
     "OptionTextA": "填充粮仓，增加赋税",
     "OptionTextB": "分粮于边境以增其粮备常驻守疆之国界",
     "Changes_A": {
       "people": -20,
-      "policy": -20,
-      "economic": 35,
+      "policy": -10,
+      "economic": 10,
       "military": 0
     },
     "Changes_B": {
       "people": 0,
-      "policy": 35,
-      "economic": -25,
+      "policy": 10,
+      "economic": -15,
       "military": 20
     }
   },
   {
     "EventID": 38,
     "ImageIndex": 5,
-    "ShowText": "今南蛮势力壮大民不聊生，望陛下与我西番为盟，抵抗南蛮以保天下太平",
+    "ShowText": "今南蛮势力日益壮大，望陛下与我西番为盟，抵抗南蛮以保天下太平",
     "ResultTextA": "南蛮受挫，西番势力壮大，国事西番话语权增多",
     "ResultTextB": "南蛮势力壮大而攻西番，两败俱伤，均未构成威胁",
-    "OptionTextA": "以西番为盟抵抗南蛮",
-    "OptionTextB": "轻南蛮而重内政以排内忧",
+    "OptionTextA": "与西番为盟抵抗南蛮",
+    "OptionTextB": "不干涉他国",
     "Changes_A": {
-      "people": 0,
-      "policy": -30,
-      "economic": 0,
+      "people": -10,
+      "policy": -25,
+      "economic": -10,
       "military": -20
     },
     "Changes_B": {
-      "people": 20,
-      "policy": 25,
+      "people": 5,
+      "policy": 20,
       "economic": 0,
       "military": 0
     }
@@ -821,63 +821,63 @@
   {
     "EventID": 39,
     "ImageIndex": 0,
-    "ShowText": "今宦官发号施令实为强健，诚宜开张圣听，听贤臣而远小人。",
-    "ResultTextA": "贤才纳谏，国事繁荣",
-    "ResultTextB": "\"诸侯勾心斗角，宦官声东击西，权力分散日益严重\"",
-    "OptionTextA": "广开言路，投身治国",
-    "OptionTextB": "先安宫廷内务为重",
+    "ShowText": "今大宦官发号施令，多有不妥",
+    "ResultTextA": "宦官旁敲侧击，权力分散日益严重",
+    "ResultTextB": "宫廷纷争让你分神乏术",
+    "OptionTextA": "先安外",
+    "OptionTextB": "先攘内",
     "Changes_A": {
-      "people": 25,
-      "policy": 25,
-      "economic": 0,
-      "military": 0
+      "people": 10,
+      "policy": 10,
+      "economic": -15,
+      "military": -15
     },
     "Changes_B": {
       "people": 0,
       "policy": -20,
-      "economic": 0,
+      "economic": 5,
       "military": 0
     }
   },
   {
     "EventID": 40,
     "ImageIndex": 7,
-    "ShowText": "连年洪灾致使百姓生活生灵涂炭",
-    "ResultTextA": "邻国频频挑衅",
-    "ResultTextB": "国家安定但哀鸿遍野",
-    "OptionTextA": "派兵赈灾救险",
-    "OptionTextB": "不派兵救灾",
+    "ShowText": "穷奇招致天灾使百姓生活不易",
+    "ResultTextA": "邻国见你分散兵力，频频挑衅",
+    "ResultTextB": "百姓得到帮助，但似乎有妖魔作乱乡里。",
+    "OptionTextA": "派兵赈灾",
+    "OptionTextB": "拨款救灾",
     "Changes_A": {
-      "people": 25,
-      "policy": 20,
-      "economic": -20,
+      "people": 20,
+      "policy": -5,
+      "economic": 0,
       "military": -20
     },
     "Changes_B": {
-      "people": -35,
-      "policy": -20,
-      "economic": 0,
+      "people": 20,
+      "policy": 5,
+      "economic": -25,
       "military": 0
     }
   },
   {
     "EventID": 41,
     "ImageIndex": 0,
-    "ShowText": "前日一农起义妄言陛下横征暴敛，是否应斩首示众，杀鸡儆猴也？",
+    "ShowText": "一村民妄言陛下横征暴敛，是否应斩首示众，杀鸡儆猴也？",
     "ResultTextA": "人民不敢发声，生活如往常",
-    "ResultTextB": "讽谏之人频起，皇庭诸侯权力减弱，内政陷入混乱",
-    "OptionTextA": "斩首且镇压起义",
-    "OptionTextB": "亲听民之直言并赋上赏",
+    "ResultTextB": "讽谏之人络绎不绝，不过有用的不多",
+    "OptionTextA": "斩首",
+    "OptionTextB": "纳谏",
     "Changes_A": {
-      "people": -30,
-      "policy": -20,
-      "economic": 0,
+      "people": -25,
+      "policy": 5,
+      "economic": -5,
       "military": 0
     },
     "Changes_B": {
-      "people": 35,
-      "policy": 30,
-      "economic": -25,
+      "people": 25,
+      "policy": -5,
+      "economic": 0,
       "military": 0
     }
   },
@@ -890,9 +890,9 @@
     "OptionTextA": "出兵援助邻邦",
     "OptionTextB": "以和为贵，不予协助",
     "Changes_A": {
-      "people": 0,
-      "policy": 0,
-      "economic": 0,
+      "people": 5,
+      "policy": 5,
+      "economic": 10,
       "military": -30
     },
     "Changes_B": {
@@ -905,20 +905,20 @@
   {
     "EventID": 43,
     "ImageIndex": 3,
-    "ShowText": "拜见皇上，吾年幼丧母，今洪荒之灾又夺妻，身残加之饥荒之苦，望皇上施恩！",
-    "ResultTextA": "在民众间的威望提升，民心统一",
-    "ResultTextB": "受到非议，但人民生活发生质的改善",
-    "OptionTextA": "施恩赏银三两",
-    "OptionTextB": "回宫制定政策",
+    "ShowText": "拜见皇上，我们乡里今年受水患影响，颗粒无收，百姓易子相食，求陛下施恩",
+    "ResultTextA": "虽救助了当地，但没有解决根本的问题。",
+    "ResultTextB": "部分政策受到非议，但帮助了更多类似有水患地方。",
+    "OptionTextA": "向地方拨款",
+    "OptionTextB": "制定政策并普及",
     "Changes_A": {
-      "people": 28,
-      "policy": 20,
-      "economic": -25,
+      "people": 20,
+      "policy": 10,
+      "economic": -20,
       "military": 0
     },
     "Changes_B": {
-      "people": 20,
-      "policy": 35,
+      "people": -5,
+      "policy": 25,
       "economic": 0,
       "military": 0
     }
@@ -926,21 +926,21 @@
   {
     "EventID": 44,
     "ImageIndex": 2,
-    "ShowText": "圣上，茶叶出口增东洲为口岸可利国利民又利于国库之经济收入也。",
-    "ResultTextA": "国库收入提升，但泉州成为外族入侵的潜在隐患",
+    "ShowText": "圣上，茶叶出口东夷国，可利国利民，又可充盈国库。",
+    "ResultTextA": "国库收入提升，但边疆似乎有外族入侵的潜在隐患",
     "ResultTextB": "国库收入平平如往常，偶有短缺。",
-    "OptionTextA": "设泉州为通商口岸/同意",
-    "OptionTextB": "不予理会/拒绝",
+    "OptionTextA": "允许商人出口",
+    "OptionTextB": "蛮夷不懂茶道",
     "Changes_A": {
-      "people": 0,
-      "policy": -25,
-      "economic": 35,
+      "people": 5,
+      "policy": -20,
+      "economic": 30,
       "military": 0
     },
     "Changes_B": {
-      "people": -20,
-      "policy": 0,
-      "economic": -20,
+      "people": -10,
+      "policy": -5,
+      "economic": -15,
       "military": 0
     }
   },
@@ -949,18 +949,18 @@
     "ImageIndex": 7,
     "ShowText": "宦官群聚于皇上周围，陛下倒台之日屈指可数。",
     "ResultTextA": "所有的隐患被消除，但大臣对国事了解尚需时日",
-    "ResultTextB": "忧心忡忡地生活导致众多决策失误",
-    "OptionTextA": "重建内阁",
-    "OptionTextB": "听而不信",
+    "ResultTextB": "你忧心忡忡地执政，导致众多决策失误",
+    "OptionTextA": "整理朝纲",
+    "OptionTextB": "沉思",
     "Changes_A": {
-      "people": 20,
-      "policy": 20,
+      "people": 10,
+      "policy": 10,
       "economic": 0,
       "military": 0
     },
     "Changes_B": {
-      "people": -20,
-      "policy": -25,
+      "people": -10,
+      "policy": -20,
       "economic": 0,
       "military": 0
     }
@@ -970,18 +970,18 @@
     "ImageIndex": 5,
     "ShowText": "陛下，吾邦有貌美公主一个，今前来赠之于皇上作妾！",
     "ResultTextA": "番邦之间关系日益紧密，边疆局势稳定",
-    "ResultTextB": "日后与邻邦间的关系常常紧张",
-    "OptionTextA": "一见钟情",
-    "OptionTextB": "不合胃口",
+    "ResultTextB": "邻邦对你产生不满",
+    "OptionTextA": "让皇后去教她礼仪吧",
+    "OptionTextB": "朕暂时没有纳妾的想法",
     "Changes_A": {
-      "people": 0,
-      "policy": 0,
-      "economic": -30,
+      "people": 5,
+      "policy": 5,
+      "economic": -10,
       "military": 0
     },
     "Changes_B": {
       "people": 0,
-      "policy": 0,
+      "policy": -10,
       "economic": 0,
       "military": 0
     }
@@ -989,20 +989,20 @@
   {
     "EventID": 47,
     "ImageIndex": 3,
-    "ShowText": "皇上，小人家中曾祖已至茶寿，而其科举屡试不济，望授秀才以使其安度晚年。",
-    "ResultTextA": "老者嘴里念道：噫，好，我中了。随即驾鹤西去",
-    "ResultTextB": "老者直到去世也未能中举",
-    "OptionTextA": "授予秀才",
-    "OptionTextB": "不予理睬",
+    "ShowText": "皇上，小人家中曾祖已年迈不堪，而其毕生所愿能入朝为官，望授以小任满足他的心愿。",
+    "ResultTextA": "老者嘴里念道：噫，好，好。随即驾鹤西去",
+    "ResultTextB": "百姓们称赞您的圣心。",
+    "OptionTextA": "授予县令一职",
+    "OptionTextB": "官员，岂可因为年长而授。",
     "Changes_A": {
-      "people": 10,
+      "people": -10,
       "policy": -10,
       "economic": 0,
       "military": 0
     },
     "Changes_B": {
-      "people": 0,
-      "policy": 0,
+      "people": 10,
+      "policy": 10,
       "economic": 0,
       "military": 0
     }
@@ -1010,20 +1010,20 @@
   {
     "EventID": 48,
     "ImageIndex": 4,
-    "ShowText": "久不见陛下前来本宫居所，甚是想念。",
-    "ResultTextA": "你此后夜夜造访皇后寝宫，次日不登早朝",
+    "ShowText": "久不见陛下前来本宫居所，常常前往妃子那里，臣妾甚是想念。",
+    "ResultTextA": "你接连几天夜夜造访皇后寝宫，龙体虚弱。",
     "ResultTextB": "皇后吃醋导致后宫纷乱",
     "OptionTextA": "多加陪伴",
     "OptionTextB": "委婉拒绝",
     "Changes_A": {
       "people": 0,
-      "policy": -20,
+      "policy": 10,
       "economic": 0,
       "military": 0
     },
     "Changes_B": {
       "people": 0,
-      "policy": 25,
+      "policy": -10,
       "economic": 0,
       "military": 0
     }
@@ -1031,21 +1031,21 @@
   {
     "EventID": 49,
     "ImageIndex": 6,
-    "ShowText": "上天昭示皇上将长命百岁",
-    "ResultTextA": "",
-    "ResultTextB": "",
-    "OptionTextA": "增税填充国库",
+    "ShowText": "上天昭示皇上将逢奇异之事",
+    "ResultTextA": "日子依然平稳地过着。",
+    "ResultTextB": "日子依然平稳地过着。",
+    "OptionTextA": "增税，以防祸事发生",
     "OptionTextB": "供奉神灵",
     "Changes_A": {
       "people": -20,
-      "policy": -30,
-      "economic": 30,
+      "policy": -10,
+      "economic": 20,
       "military": 0
     },
     "Changes_B": {
-      "people": 0,
-      "policy": 28,
-      "economic": 0,
+      "people": 10,
+      "policy": 0,
+      "economic": -10,
       "military": 0
     }
   },
@@ -1053,14 +1053,14 @@
     "EventID": 50,
     "ImageIndex": 3,
     "ShowText": "陛下，修建水坝既可以防洪防涝，又可以引水灌溉农业",
-    "ResultTextA": "国库经济降低",
-    "ResultTextB": "农业收成减少导致部分人民饿死街头",
+    "ResultTextA": "百姓们能更好的生存。",
+    "ResultTextB": "今年的久旱使农业收成减少导致部分人民饿死街头",
     "OptionTextA": "拨款建坝",
-    "OptionTextB": "拒绝建坝",
+    "OptionTextB": "国库空虚",
     "Changes_A": {
       "people": 20,
       "policy": 0,
-      "economic": -30,
+      "economic": -25,
       "military": 0
     },
     "Changes_B": {

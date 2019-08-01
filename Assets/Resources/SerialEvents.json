@@ -404,7 +404,7 @@
       "military": 0
     },
     "NextID_A": 20,
-    "NextID_B": -1,
+    "NextID_B": 20,
     "IsBegin": false
   },
   {
@@ -500,6 +500,606 @@
       "military": 0
     },
     "NextID_A": 15,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 21,
+    "ImageIndex": 2,
+    "ShowText": "陛下，小人昨日外出不慎掉落悬崖，竟被一只七色神鸟托起。小人不敢隐瞒，报以陛下。",
+    "ResultTextA": "富商应允了",
+    "ResultTextB": "你的士兵不慎伤到了神鸟，天空刮起了狂风骤雨。",
+    "OptionTextA": "你能把它带来吗？",
+    "OptionTextB": "告诉我它的位置，我将派兵捕猎。",
+    "Changes_A": {
+      "people": 10,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 22,
+    "NextID_B": 23,
+    "IsBegin": true
+  },
+  {
+    "EventID": 22,
+    "ImageIndex": 6,
+    "ShowText": "此鸟乃是仙界的信使，稍有不慎小心招致天罚，你还想见吗？",
+    "ResultTextA": "神鸟重归天庭，您的仁德普及四海。",
+    "ResultTextB": "天庭信使被带到皇宫。",
+    "OptionTextA": "若是如此朕不敢奢求一睹天颜。",
+    "OptionTextB": "朕自有分寸，神龙放心",
+    "Changes_A": {
+      "people": 20,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -5,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": 24,
+    "IsBegin": false
+  },
+  {
+    "EventID": 23,
+    "ImageIndex": 6,
+    "ShowText": "尔等竟敢伤害天宫的信使，天罚将降临你的国家。",
+    "ResultTextA": "天意难违，天罚降下，你的国家被重创。",
+    "ResultTextB": "天庭降下万向天罚，你的国家被重创。",
+    "OptionTextA": "朕知错了。",
+    "OptionTextB": "朕实在是不知啊，都是那些士兵胆大妄为。",
+    "Changes_A": {
+      "people": -10,
+      "policy": -10,
+      "economic": -10,
+      "military": -10
+    },
+    "Changes_B": {
+      "people": -15,
+      "policy": -15,
+      "economic": -15,
+      "military": -15
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 24,
+    "ImageIndex": 4,
+    "ShowText": "皇后：此鸟毛色流光溢彩，仙气流转，臣妾可否取她一根羽毛作为凤袍装饰。",
+    "ResultTextA": "神鸟很喜欢你的皇后，并赞许大胆的行为，赐予了你羽毛",
+    "ResultTextB": "\"你的皇后母仪天下，神鸟很喜欢她，觉得你没有君主气概\"",
+    "OptionTextA": "答应皇后",
+    "OptionTextB": "斥责皇后",
+    "Changes_A": {
+      "people": 10,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -10,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 25,
+    "NextID_B": 25,
+    "IsBegin": false
+  },
+  {
+    "EventID": 25,
+    "ImageIndex": 0,
+    "ShowText": "丞相与你秘密交谈：此鸟气度不凡，不似我人间之物，若能让臣取其一丝血肉，可助陛下长生不老。",
+    "ResultTextA": "丞相的士兵将神鸟断骨取血，触怒了天庭。神龙带着狂风暴雨现世。",
+    "ResultTextB": "神鸟告诉丞相此人前世积怨慎重，需要王气息压制，不然必遭大难，然后飞回了仙界",
+    "OptionTextA": "\"朕登仙后，会自向玉帝解释。\"",
+    "OptionTextB": "荒谬，她乃是天界信使。",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 23,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 26,
+    "ImageIndex": 8,
+    "ShowText": "神秘人：“我是来自异次元的先知，我知道你们最近干了什么。你觉得你们的游戏好玩嘛？”",
+    "ResultTextA": "“谦虚使人进步。”",
+    "ResultTextB": "“嗯，你是个诚实的人。”",
+    "OptionTextA": "“我们的游戏贼好玩！”",
+    "OptionTextB": "“一般般吧……”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 27,
+    "NextID_B": 27,
+    "IsBegin": true
+  },
+  {
+    "EventID": 27,
+    "ImageIndex": 8,
+    "ShowText": "“你知道我是谁吗？”",
+    "ResultTextA": "“接收大叔的奖励！”",
+    "ResultTextB": "“我你都不认识？！”",
+    "OptionTextA": "“oncle!”",
+    "OptionTextB": "“你谁啊你？”",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": -5,
+      "policy": -5,
+      "economic": -5,
+      "military": -5
+    },
+    "NextID_A": 28,
+    "NextID_B": 28,
+    "IsBegin": false
+  },
+  {
+    "EventID": 28,
+    "ImageIndex": 8,
+    "ShowText": "“作者让我问你们：这个游戏好玩吗？”",
+    "ResultTextA": "“很好，这是赏给你的。”",
+    "ResultTextB": "“你选很好玩，我兴许还能给你一些东西”",
+    "OptionTextA": "“很好玩！”",
+    "OptionTextB": "“一般般吧……”",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": 29,
+    "IsBegin": false
+  },
+  {
+    "EventID": 29,
+    "ImageIndex": 8,
+    "ShowText": "“再给你一次机会！”",
+    "ResultTextA": "“拍个马屁这么难吗……”",
+    "ResultTextB": "“谢谢你，再见。”",
+    "OptionTextA": "“很好玩.”",
+    "OptionTextB": "“贼好玩！”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 5,
+      "policy": 5,
+      "economic": 5,
+      "military": 5
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 30,
+    "ImageIndex": 5,
+    "ShowText": "“陛下，您想试试我们的特色食物吗？”",
+    "ResultTextA": "你吃下了水果，结果拉稀了三天，无法上朝……",
+    "ResultTextB": "使者捧着一种奇特的水果，真诚地看着你。",
+    "OptionTextA": "“取来让朕尝尝！”",
+    "OptionTextB": "“我不想吃……”",
+    "Changes_A": {
+      "people": 0,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 5,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 31,
+    "NextID_B": 30,
+    "IsBegin": true
+  },
+  {
+    "EventID": 31,
+    "ImageIndex": 5,
+    "ShowText": "“陛下，您觉得这个水果好吃吗？”",
+    "ResultTextA": "“太好了！我每月都为陛下进贡！”",
+    "ResultTextB": "“您可能忘记要剥开皮再吃。”",
+    "OptionTextA": "“很好吃！”",
+    "OptionTextB": "“我觉得水果可能有些问题……”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 20,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 32,
+    "NextID_B": 32,
+    "IsBegin": false
+  },
+  {
+    "EventID": 32,
+    "ImageIndex": 5,
+    "ShowText": "你苦笑着对番邦使者说：",
+    "ResultTextA": "“它有润肠通便之功效。”",
+    "ResultTextB": "“它有润肠通便之功效。”",
+    "OptionTextA": "“不必了，其实不是很好吃。”",
+    "OptionTextB": "“不必了，其实我的身体受不了。”",
+    "Changes_A": {
+      "people": 0,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 33,
+    "NextID_B": 33,
+    "IsBegin": false
+  },
+  {
+    "EventID": 33,
+    "ImageIndex": 5,
+    "ShowText": "你无奈地说：",
+    "ResultTextA": "你告诉使者不要再进贡这种奇怪的东西了。",
+    "ResultTextB": "使者被轰出了殿外。",
+    "OptionTextA": "“朕亲身体会到了……”",
+    "OptionTextB": "“你不早说……”",
+    "Changes_A": {
+      "people": 0,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 34,
+    "ImageIndex": 0,
+    "ShowText": "陛下，我们截获了东夷国的密报！他们的国王外出巡抚，此时国家防守空虚，是否趁机攻打？",
+    "ResultTextA": "远征东夷国的将士们久战不下，你的决策似乎有些问题。",
+    "ResultTextB": "你决定召大将军共议此事。",
+    "OptionTextA": "机不可失，立刻起兵",
+    "OptionTextB": "用兵需谨慎，不可莽撞",
+    "Changes_A": {
+      "people": 5,
+      "policy": 0,
+      "economic": -10,
+      "military": 10
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 35,
+    "NextID_B": 36,
+    "IsBegin": true
+  },
+  {
+    "EventID": 35,
+    "ImageIndex": 1,
+    "ShowText": "大将军请求增援将士，必能大胜敌军。",
+    "ResultTextA": "丞相突然请求觐见",
+    "ResultTextB": "你的将士徒劳无功，劳民伤财。",
+    "OptionTextA": "增派援军",
+    "OptionTextB": "撤回本部",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -5,
+      "policy": -5,
+      "economic": -5,
+      "military": -10
+    },
+    "NextID_A": 38,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 36,
+    "ImageIndex": 1,
+    "ShowText": "丞相与东夷国的国师结有私仇，此次密报定是丞相虚构，为了个人恩怨。",
+    "ResultTextA": "你错过了绝佳战机，东夷国开始蠢蠢欲动。",
+    "ResultTextB": "你认为其中另有隐情。",
+    "OptionTextA": "点头",
+    "OptionTextB": "沉思",
+    "Changes_A": {
+      "people": -5,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": 37,
+    "IsBegin": false
+  },
+  {
+    "EventID": 37,
+    "ImageIndex": 0,
+    "ShowText": "丞相说：他与东夷国师是有恩怨不假，然此次战报是他的安插的奸细提供，是千载难逢的战机。",
+    "ResultTextA": "远征东夷国的将士们晚了一步，大军只是小有收获。",
+    "ResultTextB": "你迁延不定，误了战机。",
+    "OptionTextA": "机不可失，那就起兵吧。",
+    "OptionTextB": "你认为其中另有隐情。",
+    "Changes_A": {
+      "people": -5,
+      "policy": 5,
+      "economic": 15,
+      "military": -5
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": -10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 38,
+    "ImageIndex": 0,
+    "ShowText": "此时增派，援军到后已是为时已晚，劳民伤财陛下收回成命。",
+    "ResultTextA": "远征东夷国的将士们晚了一步，大军只是小有收获。",
+    "ResultTextB": "你收到大将军密报。",
+    "OptionTextA": "增援你的将士。",
+    "OptionTextB": "召大将军。",
+    "Changes_A": {
+      "people": -5,
+      "policy": 5,
+      "economic": 15,
+      "military": -5
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 15,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": 36,
+    "IsBegin": false
+  },
+  {
+    "EventID": 39,
+    "ImageIndex": 1,
+    "ShowText": "边疆庶民似乎有起义的迹象，是否派兵镇压？",
+    "ResultTextA": "大将军惶恐。",
+    "ResultTextB": "丞相带着一个庶民走了进来。",
+    "OptionTextA": "竟然胆敢挑战王权，流血会让他们清醒",
+    "OptionTextB": "沉吟不定",
+    "Changes_A": {
+      "people": -10,
+      "policy": 5,
+      "economic": -5,
+      "military": 10
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 40,
+    "NextID_B": 41,
+    "IsBegin": true
+  },
+  {
+    "EventID": 40,
+    "ImageIndex": 1,
+    "ShowText": "\"陛下，这些边境刁民，不服教化，偷漏国税，臣不得已才用武力镇压，然望陛下免去杀伐。\"",
+    "ResultTextA": "一些百姓被处死，但是大将军也愈发的喜欢用武力解决问题了……",
+    "ResultTextB": "你派去的官员反而被刁民打了，不过百姓们都称赞你的行为。",
+    "OptionTextA": "杀鸡儆猴",
+    "OptionTextB": "王权教化",
+    "Changes_A": {
+      "people": -10,
+      "policy": 5,
+      "economic": 10,
+      "military": 5
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 10,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": -1,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 41,
+    "ImageIndex": 3,
+    "ShowText": "启禀陛下，都是你的大将军在边境任人唯亲，收取苛捐杂税，我们不得已与官兵发生冲突……",
+    "ResultTextA": "百姓们对你感恩戴德，但是边境的税收少了。",
+    "ResultTextB": "大将军受宠若惊。",
+    "OptionTextA": "你们受苦了。",
+    "OptionTextB": "大胆刁民敢栽赃我朝大将，是想掉脑袋吗？",
+    "Changes_A": {
+      "people": 20,
+      "policy": 10,
+      "economic": -15,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": -15,
+      "policy": -5,
+      "economic": 5,
+      "military": 10
+    },
+    "NextID_A": -1,
+    "NextID_B": 40,
+    "IsBegin": false
+  },
+  {
+    "EventID": 42,
+    "ImageIndex": 4,
+    "ShowText": "大王，臣妾知晓您近日繁忙，但已多日未陪伴臣妾，甚是想念。",
+    "ResultTextA": "你如约前往皇后的寝宫",
+    "ResultTextB": "皇后露出委屈的神情",
+    "OptionTextA": "今夜朕便去陪你",
+    "OptionTextB": "朕有要事在身，改日吧",
+    "Changes_A": {
+      "people": 0,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 43,
+    "NextID_B": 44,
+    "IsBegin": true
+  },
+  {
+    "EventID": 43,
+    "ImageIndex": 4,
+    "ShowText": "大王，臣妾前日遇大将军，其虽报国有功，但竟对臣妾不施以礼节……",
+    "ResultTextA": "谢皇上恩宠！",
+    "ResultTextB": "臣妾明白了……",
+    "OptionTextA": "将军竟如此无礼？朕明日便责问他！",
+    "OptionTextB": "大将军不拘小节，是个粗人，不必在意。",
+    "Changes_A": {
+      "people": 10,
+      "policy": 0,
+      "economic": 0,
+      "military": -5
+    },
+    "Changes_B": {
+      "people": 10,
+      "policy": 0,
+      "economic": 0,
+      "military": 5
+    },
+    "NextID_A": 45,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 44,
+    "ImageIndex": 4,
+    "ShowText": "皇后一把拉住了你，你叹了一口气",
+    "ResultTextA": "你如约前往皇后的寝宫",
+    "ResultTextB": "皇后告退了",
+    "OptionTextA": "今夜朕便去陪你",
+    "OptionTextB": "不要让朕讲第二次",
+    "Changes_A": {
+      "people": 0,
+      "policy": -5,
+      "economic": 0,
+      "military": 0
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 5,
+      "economic": 0,
+      "military": 0
+    },
+    "NextID_A": 43,
+    "NextID_B": -1,
+    "IsBegin": false
+  },
+  {
+    "EventID": 45,
+    "ImageIndex": 1,
+    "ShowText": "第二日，你来责问将军，大将军竟抢先告罪，称自己饮酒误事，不曾向皇后行礼，你决定？",
+    "ResultTextA": "大将军被你禁酒一月，痛不欲生。",
+    "ResultTextB": "你如此宠爱后宫，致使将士们士气受挫。",
+    "OptionTextA": "稍加责罚",
+    "OptionTextB": "不依不饶",
+    "Changes_A": {
+      "people": 5,
+      "policy": 5,
+      "economic": 0,
+      "military": 10
+    },
+    "Changes_B": {
+      "people": 0,
+      "policy": 0,
+      "economic": 0,
+      "military": -5
+    },
+    "NextID_A": -1,
     "NextID_B": -1,
     "IsBegin": false
   }
