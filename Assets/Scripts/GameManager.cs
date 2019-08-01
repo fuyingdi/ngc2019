@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        print(Sliders[3].GetComponent<Slider>().value);
+        print(Player.People);
         if (Sliders[0].GetComponent<Slider>().value <= 0)
         {
             Invoke("PeopleFail", 2f);
