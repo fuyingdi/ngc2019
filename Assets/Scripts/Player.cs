@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     private void Awake()
     {
 
-        //SetAllValue(80, 80, 80, 80);
         ProgressValue = 0;
     }
     public static int People
@@ -75,7 +74,7 @@ public class Player : MonoBehaviour
         Economic += economic;
         Military += military;
     }
-    void SetAllValue(int people, int policy, int military, int economic)
+    public static void SetAllValue(int people, int policy, int military, int economic)
     {
         People = people;
         Policy = policy;

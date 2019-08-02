@@ -27,11 +27,14 @@ public class EventController : MonoBehaviour/*事件控制器*/
 
     public bool isWaitForNext;
 
+    public static int StartHP;
+
 
 
     private void Awake()
     {
-        Player.Economic = Player.People = Player.Policy = Player.Military = 80;
+        Player.SetAllValue(StartHP,StartHP,StartHP,StartHP);
+        //Player.Economic = Player.People = Player.Policy = Player.Military = 80;
     }
 
     private void Start()

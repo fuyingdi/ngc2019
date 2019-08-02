@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         public double SpecialEventRate;
         public double UpFactor;
         public double DownFactor;
+        public int StartHP;
     }
     public GameObject[] FailImages;
     public GameObject WinImage;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
         EventCreator.SerialEventRate = (float)GameConfig.SpecialEventRate;
         EventCreator.UpFactor = (float)GameConfig.UpFactor;
         EventCreator.DownFactor = (float)GameConfig.DownFactor;
+        EventController.StartHP = GameConfig.StartHP;
 
 
         isFail = false;
@@ -82,11 +84,11 @@ public class GameManager : MonoBehaviour
     #region GameOver
     IEnumerator PeopleFail()
     {
-        
+        Debug.Log("1");
         for (int i = 0; i < 10; i++)
         {
             float x = i / 10f;
-            losemask.color = new Color(1, 1, 1, x);
+            losemask.color = new Color(0, 0, 0, x);
             yield return new WaitForSeconds(0.1f);
         }
         FailImages[0].SetActive(true);
@@ -96,25 +98,25 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator PolicyFail()
     {
+        Debug.Log("2");
         for (int i = 0; i < 10; i++)
         {
             float x = i / 10f;
-            losemask.color = new Color(1, 1, 1, x);
+            losemask.color = new Color(0, 0, 0, x);
             yield return new WaitForSeconds(0.1f);
         }
         isFail = true;
         FailImages[1].SetActive(true);
         AudiosController.GameOver();
         yield break;
-
-
     }
     IEnumerator EconomicFail()
     {
+        Debug.Log("3");
         for (int i = 0; i < 10; i++)
         {
             float x = i / 10f;
-            losemask.color = new Color(1, 1, 1, x);
+            losemask.color = new Color(0, 0, 0, x);
             yield return new WaitForSeconds(0.1f);
         }
         isFail = true;
@@ -125,10 +127,11 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator MilitaryFail()
     {
+        Debug.Log("4");
         for (int i = 0; i < 10; i++)
         {
             float x = i / 10f;
-            losemask.color = new Color(1, 1, 1, x);
+            losemask.color = new Color(0, 0, 0, x);
             yield return new WaitForSeconds(0.1f);
         }
         isFail = true;
@@ -142,6 +145,7 @@ public class GameManager : MonoBehaviour
     #region
     IEnumerator Win()
     {
+        Debug.Log("5");
         for (int i = 0; i < 10; i++)
         {
             float x = i / 10f;

@@ -1,7 +1,8 @@
 {
-  "EventCount": 30,
-  "SpecialEventRate": 0.9,
+  "EventCount": 2,
+  "SpecialEventRate": 0.3,
   "UpFactor": 1.5,
-  "DownFactor": 0
+  "DownFactor": 10,
+  "StartHP": 65
 
 }
