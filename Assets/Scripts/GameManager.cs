@@ -85,11 +85,11 @@ public class GameManager : MonoBehaviour
     IEnumerator PeopleFail()
     {
         Debug.Log("1");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
-            float x = i / 10f;
+            float x = i / 100f;
             losemask.color = new Color(0, 0, 0, x);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
         FailImages[0].SetActive(true);
         isFail = true;
@@ -99,11 +99,11 @@ public class GameManager : MonoBehaviour
     IEnumerator PolicyFail()
     {
         Debug.Log("2");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
-            float x = i / 10f;
+            float x = i / 100f;
             losemask.color = new Color(0, 0, 0, x);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
         isFail = true;
         FailImages[1].SetActive(true);
@@ -113,11 +113,11 @@ public class GameManager : MonoBehaviour
     IEnumerator EconomicFail()
     {
         Debug.Log("3");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
-            float x = i / 10f;
+            float x = i / 100f;
             losemask.color = new Color(0, 0, 0, x);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
         isFail = true;
         FailImages[2].SetActive(true);
@@ -128,11 +128,11 @@ public class GameManager : MonoBehaviour
     IEnumerator MilitaryFail()
     {
         Debug.Log("4");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
-            float x = i / 10f;
+            float x = i / 100f;
             losemask.color = new Color(0, 0, 0, x);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
         isFail = true;
         FailImages[3].SetActive(true);
@@ -146,12 +146,12 @@ public class GameManager : MonoBehaviour
     IEnumerator Win()
     {
         Debug.Log("5");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 100; i++)
         {
-            float x = i / 10f;
+            float x = i / 100f;
             winmask.color = new Color(1, 1, 1, x);
             print(x);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
         isWin = true;
         WinImage.SetActive(true);
